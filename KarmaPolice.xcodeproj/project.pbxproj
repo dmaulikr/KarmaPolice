@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B4C76A31883F2FB00FD686D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A21883F2FB00FD686D /* Foundation.framework */; };
+		2B4C76A51883F2FB00FD686D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */; };
+		2B4C76A71883F2FB00FD686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A61883F2FB00FD686D /* UIKit.framework */; };
+		2B4C76AD1883F2FB00FD686D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76AB1883F2FB00FD686D /* InfoPlist.strings */; };
+		2B4C76AF1883F2FB00FD686D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76AE1883F2FB00FD686D /* main.m */; };
+		2B4C76B31883F2FB00FD686D /* KPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */; };
+		2B4C76B61883F2FB00FD686D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76B41883F2FB00FD686D /* Main.storyboard */; };
+		2B4C76B91883F2FB00FD686D /* KPFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76B81883F2FB00FD686D /* KPFirstViewController.m */; };
+		2B4C76BC1883F2FB00FD686D /* KPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76BB1883F2FB00FD686D /* KPSecondViewController.m */; };
+		2B4C76BE1883F2FB00FD686D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76BD1883F2FB00FD686D /* Images.xcassets */; };
+		2B4C76C51883F2FB00FD686D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76C41883F2FB00FD686D /* XCTest.framework */; };
+		2B4C76C61883F2FB00FD686D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A21883F2FB00FD686D /* Foundation.framework */; };
+		2B4C76C71883F2FB00FD686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A61883F2FB00FD686D /* UIKit.framework */; };
+		2B4C76CF1883F2FB00FD686D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76CD1883F2FB00FD686D /* InfoPlist.strings */; };
+		2B4C76D11883F2FB00FD686D /* KarmaPoliceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76D01883F2FB00FD686D /* KarmaPoliceTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B4C76C81883F2FB00FD686D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B4C76971883F2FB00FD686D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4C769E1883F2FB00FD686D;
+			remoteInfo = KarmaPolice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2B4C769F1883F2FB00FD686D /* KarmaPolice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KarmaPolice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4C76A21883F2FB00FD686D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2B4C76A61883F2FB00FD686D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2B4C76AA1883F2FB00FD686D /* KarmaPolice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KarmaPolice-Info.plist"; sourceTree = "<group>"; };
+		2B4C76AC1883F2FB00FD686D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B4C76AE1883F2FB00FD686D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B4C76B01883F2FB00FD686D /* KarmaPolice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KarmaPolice-Prefix.pch"; sourceTree = "<group>"; };
+		2B4C76B11883F2FB00FD686D /* KPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPAppDelegate.h; sourceTree = "<group>"; };
+		2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPAppDelegate.m; sourceTree = "<group>"; };
+		2B4C76B51883F2FB00FD686D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B4C76B71883F2FB00FD686D /* KPFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPFirstViewController.h; sourceTree = "<group>"; };
+		2B4C76B81883F2FB00FD686D /* KPFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPFirstViewController.m; sourceTree = "<group>"; };
+		2B4C76BA1883F2FB00FD686D /* KPSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPSecondViewController.h; sourceTree = "<group>"; };
+		2B4C76BB1883F2FB00FD686D /* KPSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPSecondViewController.m; sourceTree = "<group>"; };
+		2B4C76BD1883F2FB00FD686D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2B4C76C31883F2FB00FD686D /* KarmaPoliceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KarmaPoliceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4C76C41883F2FB00FD686D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2B4C76CC1883F2FB00FD686D /* KarmaPoliceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KarmaPoliceTests-Info.plist"; sourceTree = "<group>"; };
+		2B4C76CE1883F2FB00FD686D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B4C76D01883F2FB00FD686D /* KarmaPoliceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KarmaPoliceTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2B4C769C1883F2FB00FD686D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4C76A51883F2FB00FD686D /* CoreGraphics.framework in Frameworks */,
+				2B4C76A71883F2FB00FD686D /* UIKit.framework in Frameworks */,
+				2B4C76A31883F2FB00FD686D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4C76C01883F2FB00FD686D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4C76C51883F2FB00FD686D /* XCTest.framework in Frameworks */,
+				2B4C76C71883F2FB00FD686D /* UIKit.framework in Frameworks */,
+				2B4C76C61883F2FB00FD686D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B4C76961883F2FB00FD686D = {
+			isa = PBXGroup;
+			children = (
+				2B4C76A81883F2FB00FD686D /* KarmaPolice */,
+				2B4C76CA1883F2FB00FD686D /* KarmaPoliceTests */,
+				2B4C76A11883F2FB00FD686D /* Frameworks */,
+				2B4C76A01883F2FB00FD686D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2B4C76A01883F2FB00FD686D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C769F1883F2FB00FD686D /* KarmaPolice.app */,
+				2B4C76C31883F2FB00FD686D /* KarmaPoliceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B4C76A11883F2FB00FD686D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C76A21883F2FB00FD686D /* Foundation.framework */,
+				2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */,
+				2B4C76A61883F2FB00FD686D /* UIKit.framework */,
+				2B4C76C41883F2FB00FD686D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B4C76A81883F2FB00FD686D /* KarmaPolice */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C76B11883F2FB00FD686D /* KPAppDelegate.h */,
+				2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */,
+				2B4C76B41883F2FB00FD686D /* Main.storyboard */,
+				2B4C76B71883F2FB00FD686D /* KPFirstViewController.h */,
+				2B4C76B81883F2FB00FD686D /* KPFirstViewController.m */,
+				2B4C76BA1883F2FB00FD686D /* KPSecondViewController.h */,
+				2B4C76BB1883F2FB00FD686D /* KPSecondViewController.m */,
+				2B4C76BD1883F2FB00FD686D /* Images.xcassets */,
+				2B4C76A91883F2FB00FD686D /* Supporting Files */,
+			);
+			path = KarmaPolice;
+			sourceTree = "<group>";
+		};
+		2B4C76A91883F2FB00FD686D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C76AA1883F2FB00FD686D /* KarmaPolice-Info.plist */,
+				2B4C76AB1883F2FB00FD686D /* InfoPlist.strings */,
+				2B4C76AE1883F2FB00FD686D /* main.m */,
+				2B4C76B01883F2FB00FD686D /* KarmaPolice-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B4C76CA1883F2FB00FD686D /* KarmaPoliceTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C76D01883F2FB00FD686D /* KarmaPoliceTests.m */,
+				2B4C76CB1883F2FB00FD686D /* Supporting Files */,
+			);
+			path = KarmaPoliceTests;
+			sourceTree = "<group>";
+		};
+		2B4C76CB1883F2FB00FD686D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C76CC1883F2FB00FD686D /* KarmaPoliceTests-Info.plist */,
+				2B4C76CD1883F2FB00FD686D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B4C769E1883F2FB00FD686D /* KarmaPolice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4C76D41883F2FB00FD686D /* Build configuration list for PBXNativeTarget "KarmaPolice" */;
+			buildPhases = (
+				2B4C769B1883F2FB00FD686D /* Sources */,
+				2B4C769C1883F2FB00FD686D /* Frameworks */,
+				2B4C769D1883F2FB00FD686D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KarmaPolice;
+			productName = KarmaPolice;
+			productReference = 2B4C769F1883F2FB00FD686D /* KarmaPolice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B4C76C21883F2FB00FD686D /* KarmaPoliceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4C76D71883F2FB00FD686D /* Build configuration list for PBXNativeTarget "KarmaPoliceTests" */;
+			buildPhases = (
+				2B4C76BF1883F2FB00FD686D /* Sources */,
+				2B4C76C01883F2FB00FD686D /* Frameworks */,
+				2B4C76C11883F2FB00FD686D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B4C76C91883F2FB00FD686D /* PBXTargetDependency */,
+			);
+			name = KarmaPoliceTests;
+			productName = KarmaPoliceTests;
+			productReference = 2B4C76C31883F2FB00FD686D /* KarmaPoliceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B4C76971883F2FB00FD686D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KP;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Karma Police";
+				TargetAttributes = {
+					2B4C76C21883F2FB00FD686D = {
+						TestTargetID = 2B4C769E1883F2FB00FD686D;
+					};
+				};
+			};
+			buildConfigurationList = 2B4C769A1883F2FB00FD686D /* Build configuration list for PBXProject "KarmaPolice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B4C76961883F2FB00FD686D;
+			productRefGroup = 2B4C76A01883F2FB00FD686D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B4C769E1883F2FB00FD686D /* KarmaPolice */,
+				2B4C76C21883F2FB00FD686D /* KarmaPoliceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B4C769D1883F2FB00FD686D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4C76BE1883F2FB00FD686D /* Images.xcassets in Resources */,
+				2B4C76AD1883F2FB00FD686D /* InfoPlist.strings in Resources */,
+				2B4C76B61883F2FB00FD686D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4C76C11883F2FB00FD686D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4C76CF1883F2FB00FD686D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B4C769B1883F2FB00FD686D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4C76B91883F2FB00FD686D /* KPFirstViewController.m in Sources */,
+				2B4C76BC1883F2FB00FD686D /* KPSecondViewController.m in Sources */,
+				2B4C76AF1883F2FB00FD686D /* main.m in Sources */,
+				2B4C76B31883F2FB00FD686D /* KPAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4C76BF1883F2FB00FD686D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4C76D11883F2FB00FD686D /* KarmaPoliceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B4C76C91883F2FB00FD686D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B4C769E1883F2FB00FD686D /* KarmaPolice */;
+			targetProxy = 2B4C76C81883F2FB00FD686D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B4C76AB1883F2FB00FD686D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B4C76AC1883F2FB00FD686D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2B4C76B41883F2FB00FD686D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B4C76B51883F2FB00FD686D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2B4C76CD1883F2FB00FD686D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B4C76CE1883F2FB00FD686D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B4C76D21883F2FB00FD686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2B4C76D31883F2FB00FD686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B4C76D51883F2FB00FD686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KarmaPolice/KarmaPolice-Prefix.pch";
+				INFOPLIST_FILE = "KarmaPolice/KarmaPolice-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2B4C76D61883F2FB00FD686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KarmaPolice/KarmaPolice-Prefix.pch";
+				INFOPLIST_FILE = "KarmaPolice/KarmaPolice-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2B4C76D81883F2FB00FD686D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KarmaPolice.app/KarmaPolice";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KarmaPolice/KarmaPolice-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KarmaPoliceTests/KarmaPoliceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2B4C76D91883F2FB00FD686D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KarmaPolice.app/KarmaPolice";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KarmaPolice/KarmaPolice-Prefix.pch";
+				INFOPLIST_FILE = "KarmaPoliceTests/KarmaPoliceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B4C769A1883F2FB00FD686D /* Build configuration list for PBXProject "KarmaPolice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4C76D21883F2FB00FD686D /* Debug */,
+				2B4C76D31883F2FB00FD686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B4C76D41883F2FB00FD686D /* Build configuration list for PBXNativeTarget "KarmaPolice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4C76D51883F2FB00FD686D /* Debug */,
+				2B4C76D61883F2FB00FD686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B4C76D71883F2FB00FD686D /* Build configuration list for PBXNativeTarget "KarmaPoliceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4C76D81883F2FB00FD686D /* Debug */,
+				2B4C76D91883F2FB00FD686D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B4C76971883F2FB00FD686D /* Project object */;
+}
