@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3C9C3718857CF3008343D5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3C9C3618857CF3008343D5 /* FacebookSDK.framework */; };
 		2B4C76A31883F2FB00FD686D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A21883F2FB00FD686D /* Foundation.framework */; };
 		2B4C76A51883F2FB00FD686D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */; };
 		2B4C76A71883F2FB00FD686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A61883F2FB00FD686D /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B3C9C3618857CF3008343D5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = KarmaPoliceTests/FacebookSDK.framework; sourceTree = "<group>"; };
 		2B4C769F1883F2FB00FD686D /* KarmaPolice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KarmaPolice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4C76A21883F2FB00FD686D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B4C76A51883F2FB00FD686D /* CoreGraphics.framework in Frameworks */,
+				2B3C9C3718857CF3008343D5 /* FacebookSDK.framework in Frameworks */,
 				2B4C76A71883F2FB00FD686D /* UIKit.framework in Frameworks */,
 				2B4C76A31883F2FB00FD686D /* Foundation.framework in Frameworks */,
 			);
@@ -104,6 +107,7 @@
 		2B4C76A11883F2FB00FD686D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B3C9C3618857CF3008343D5 /* FacebookSDK.framework */,
 				2B4C76A21883F2FB00FD686D /* Foundation.framework */,
 				2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */,
 				2B4C76A61883F2FB00FD686D /* UIKit.framework */,
@@ -217,6 +221,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 2B4C76961883F2FB00FD686D;
 			productRefGroup = 2B4C76A01883F2FB00FD686D /* Products */;
@@ -385,6 +390,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/FacebookSDK",
+					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/KarmaPoliceTests",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KarmaPolice/KarmaPolice-Prefix.pch";
 				INFOPLIST_FILE = "KarmaPolice/KarmaPolice-Info.plist";
@@ -398,6 +408,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/FacebookSDK",
+					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/KarmaPoliceTests",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KarmaPolice/KarmaPolice-Prefix.pch";
 				INFOPLIST_FILE = "KarmaPolice/KarmaPolice-Info.plist";
@@ -467,6 +482,7 @@
 				2B4C76D61883F2FB00FD686D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B4C76D71883F2FB00FD686D /* Build configuration list for PBXNativeTarget "KarmaPoliceTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +491,7 @@
 				2B4C76D91883F2FB00FD686D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
