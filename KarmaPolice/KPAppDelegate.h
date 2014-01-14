@@ -4,7 +4,7 @@
 //
 //  Created by Gil Shulman on 1/13/14.
 //  Copyright (c) 2014 Karma Police. All rights reserved.
-// Gil's code Test
+// Gil and Liz's code!
 //
 
 #import <UIKit/UIKit.h>
