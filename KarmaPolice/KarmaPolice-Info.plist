@@ -34,15 +34,8 @@
 	<string>254848478004741</string>
 	<key>FacebookDisplayName</key>
 	<string>Karma Police</string>
-	<key>URL types</key>
-	<array>
-		<dict>
-            <array>
-                <key>URL Schemes</key>
-                <string>fb254848478004741</string>
-            <array/>
-		<dict/>
-	</array>
+	<key>URL Schemes</key>
+	<string>fb254848478004741</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
