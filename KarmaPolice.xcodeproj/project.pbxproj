@@ -17,7 +17,7 @@
 		2B31D50F1887DC2C00FE6E4A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D50E1887DC2C00FE6E4A /* Security.framework */; };
 		2B31D5111887DC3400FE6E4A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5101887DC3400FE6E4A /* StoreKit.framework */; };
 		2B31D5131887DC4000FE6E4A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5121887DC4000FE6E4A /* SystemConfiguration.framework */; };
-		2B3C9C3718857CF3008343D5 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3C9C3618857CF3008343D5 /* FacebookSDK.framework */; };
+		2B31D5151887E78800FE6E4A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5141887E78800FE6E4A /* FacebookSDK.framework */; };
 		2B4C76A31883F2FB00FD686D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A21883F2FB00FD686D /* Foundation.framework */; };
 		2B4C76A51883F2FB00FD686D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */; };
 		2B4C76A71883F2FB00FD686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A61883F2FB00FD686D /* UIKit.framework */; };
@@ -56,7 +56,7 @@
 		2B31D50E1887DC2C00FE6E4A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2B31D5101887DC3400FE6E4A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2B31D5121887DC4000FE6E4A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2B3C9C3618857CF3008343D5 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = KarmaPoliceTests/FacebookSDK.framework; sourceTree = "<group>"; };
+		2B31D5141887E78800FE6E4A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		2B4C769F1883F2FB00FD686D /* KarmaPolice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KarmaPolice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4C76A21883F2FB00FD686D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,10 +95,10 @@
 				2B4C76A51883F2FB00FD686D /* CoreGraphics.framework in Frameworks */,
 				2B31D5051887DBE000FE6E4A /* CFNetwork.framework in Frameworks */,
 				2B31D5031887DBD600FE6E4A /* AudioToolbox.framework in Frameworks */,
-				2B3C9C3718857CF3008343D5 /* FacebookSDK.framework in Frameworks */,
 				2B4C76A71883F2FB00FD686D /* UIKit.framework in Frameworks */,
 				2B4C76A31883F2FB00FD686D /* Foundation.framework in Frameworks */,
 				2B31D5011887DB5A00FE6E4A /* Parse.framework in Frameworks */,
+				2B31D5151887E78800FE6E4A /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +137,7 @@
 		2B4C76A11883F2FB00FD686D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B31D5141887E78800FE6E4A /* FacebookSDK.framework */,
 				2B31D5121887DC4000FE6E4A /* SystemConfiguration.framework */,
 				2B31D5101887DC3400FE6E4A /* StoreKit.framework */,
 				2B31D50E1887DC2C00FE6E4A /* Security.framework */,
@@ -147,7 +148,6 @@
 				2B31D5041887DBE000FE6E4A /* CFNetwork.framework */,
 				2B31D5021887DBD600FE6E4A /* AudioToolbox.framework */,
 				2B31D5001887DB5A00FE6E4A /* Parse.framework */,
-				2B3C9C3618857CF3008343D5 /* FacebookSDK.framework */,
 				2B4C76A21883F2FB00FD686D /* Foundation.framework */,
 				2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */,
 				2B4C76A61883F2FB00FD686D /* UIKit.framework */,
