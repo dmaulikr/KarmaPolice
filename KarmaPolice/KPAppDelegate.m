@@ -7,15 +7,17 @@
 //
 
 #import "KPAppDelegate.h"
-#import "<Parse/Parse.h>"
+#import <Parse/Parse.h>
 
 @implementation KPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"Muo904vBZAdFQzXGvgQlMI9u3ZJ0JBTVV456rU3C"
+                  clientKey:@"LIUytnzp1ywCJuuK0d31nnys7wPIeMjYHpwUnR24"];
     
-    [PFFacebookUtils initializeFacebook;]
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 							

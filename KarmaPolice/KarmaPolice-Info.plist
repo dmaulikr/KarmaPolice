@@ -20,8 +20,23 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb254848478004741</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>FacebookAppID</key>
+	<string>254848478004741</string>
+	<key>FacebookDisplayName</key>
+	<string>Karma Police</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
@@ -30,12 +45,6 @@
 	<array>
 		<string></string>
 	</array>
-	<key>FacebookAppID</key>
-	<string>254848478004741</string>
-	<key>FacebookDisplayName</key>
-	<string>Karma Police</string>
-	<key>URL Schemes</key>
-	<string>fb254848478004741</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
