@@ -7,6 +7,7 @@
 //
 
 #import "KPAppDelegate.h"
+#import "<Parse/Parse.h>"
 
 @implementation KPAppDelegate
 
