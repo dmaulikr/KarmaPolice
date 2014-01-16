@@ -8,7 +8,6 @@
 
 #import "KPAppDelegate.h"
 #import <Parse/Parse.h>
-//#import "LoginViewController.h"
 
 @implementation KPAppDelegate
 
@@ -16,6 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
     // Override point for customization after application launch.
     [Parse setApplicationId:@"Muo904vBZAdFQzXGvgQlMI9u3ZJ0JBTVV456rU3C"
                   clientKey:@"LIUytnzp1ywCJuuK0d31nnys7wPIeMjYHpwUnR24"];
@@ -25,13 +25,14 @@
     
     // Override point for customization after application launch.
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[PFLogInViewController alloc] init]];
+    PFLogInViewController *LoginViewController = [[PFLogInViewController alloc] init];
+    
+    //LoginViewController.fields = PFLogInFieldsFacebookButton;
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:LoginViewController];
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    // Present Log In View Controller
-    
-
     [self.window makeKeyAndVisible];
+    //[self presentModalViewController:logInController animated:YES];
 
     
     return YES;
