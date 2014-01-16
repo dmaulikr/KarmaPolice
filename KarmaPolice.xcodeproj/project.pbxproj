@@ -18,6 +18,8 @@
 		2B31D5111887DC3400FE6E4A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5101887DC3400FE6E4A /* StoreKit.framework */; };
 		2B31D5131887DC4000FE6E4A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5121887DC4000FE6E4A /* SystemConfiguration.framework */; };
 		2B31D5151887E78800FE6E4A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5141887E78800FE6E4A /* FacebookSDK.framework */; };
+		2B31D51718880E4000FE6E4A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B31D51618880E4000FE6E4A /* LoginViewController.xib */; };
+		2B31D51A18880F9F00FE6E4A /* LoginViewController.c in Sources */ = {isa = PBXBuildFile; fileRef = 2B31D51918880F9F00FE6E4A /* LoginViewController.c */; };
 		2B4C76A31883F2FB00FD686D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A21883F2FB00FD686D /* Foundation.framework */; };
 		2B4C76A51883F2FB00FD686D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */; };
 		2B4C76A71883F2FB00FD686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A61883F2FB00FD686D /* UIKit.framework */; };
@@ -57,6 +59,9 @@
 		2B31D5101887DC3400FE6E4A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2B31D5121887DC4000FE6E4A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2B31D5141887E78800FE6E4A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		2B31D51618880E4000FE6E4A /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		2B31D51818880F8900FE6E4A /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2B31D51918880F9F00FE6E4A /* LoginViewController.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LoginViewController.c; sourceTree = "<group>"; };
 		2B4C769F1883F2FB00FD686D /* KarmaPolice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KarmaPolice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4C76A21883F2FB00FD686D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,6 +173,9 @@
 				2B4C76BB1883F2FB00FD686D /* KPSecondViewController.m */,
 				2B4C76BD1883F2FB00FD686D /* Images.xcassets */,
 				2B4C76A91883F2FB00FD686D /* Supporting Files */,
+				2B31D51618880E4000FE6E4A /* LoginViewController.xib */,
+				2B31D51818880F8900FE6E4A /* LoginViewController.h */,
+				2B31D51918880F9F00FE6E4A /* LoginViewController.c */,
 			);
 			path = KarmaPolice;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B31D51718880E4000FE6E4A /* LoginViewController.xib in Resources */,
 				2B4C76BE1883F2FB00FD686D /* Images.xcassets in Resources */,
 				2B4C76AD1883F2FB00FD686D /* InfoPlist.strings in Resources */,
 				2B4C76B61883F2FB00FD686D /* Main.storyboard in Resources */,
@@ -304,6 +313,7 @@
 				2B4C76BC1883F2FB00FD686D /* KPSecondViewController.m in Sources */,
 				2B4C76AF1883F2FB00FD686D /* main.m in Sources */,
 				2B4C76B31883F2FB00FD686D /* KPAppDelegate.m in Sources */,
+				2B31D51A18880F9F00FE6E4A /* LoginViewController.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

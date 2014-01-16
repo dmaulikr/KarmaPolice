@@ -8,9 +8,11 @@
 
 #import "KPAppDelegate.h"
 #import <Parse/Parse.h>
-#import "LoginViewController.h"
+//#import "LoginViewController.h"
 
 @implementation KPAppDelegate
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -19,7 +21,19 @@
                   clientKey:@"LIUytnzp1ywCJuuK0d31nnys7wPIeMjYHpwUnR24"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    [FBLoginView class];
+    [PFFacebookUtils initializeFacebook];
+    
+    // Override point for customization after application launch.
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[PFLogInViewController alloc] init]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    // Present Log In View Controller
+    
+
+    [self.window makeKeyAndVisible];
+
+    
     return YES;
 }
 							
@@ -52,7 +66,7 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-    return [FBAppCall handleOpenUrl:url
+    return [FBAppCall handleOpenURL:url
                   sourceApplication:sourceApplication
                         withSession:[PFFacebookUtils session]];
 }
