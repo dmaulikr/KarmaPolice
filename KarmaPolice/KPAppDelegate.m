@@ -27,6 +27,7 @@
     
     PFLogInViewController *LoginViewController = [PFLogInViewController new];
     LoginViewController.fields = PFLogInFieldsFacebook;
+    LoginViewController.title = @"Karma Police";
     
     //LoginViewController.fields = PFLogInFieldsFacebookButton;
     
