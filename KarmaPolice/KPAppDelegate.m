@@ -25,7 +25,7 @@
     
     // Override point for customization after application launch.
     
-    PFLogInViewController *LoginViewController = [[PFLogInViewController alloc] init];
+    PFLogInViewController *LoginViewController = [PFLogInViewController new];
     
     //LoginViewController.fields = PFLogInFieldsFacebookButton;
     
