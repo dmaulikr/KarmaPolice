@@ -35,26 +35,10 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
     LoginViewController.fields = PFLogInFieldsFacebook;
     LoginViewController.title = @"Karma Police";
     [LoginViewController.logInView.facebookButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:UIControlEventTouchUpInside];
-    //@selector(loginButtonTouchHandler:)
-    
-    //LoginViewController.fields = PFLogInFieldsFacebookButton;
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:LoginViewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    /*
-    NSArray *permissions = @[@"email", @"read_friendlists"];
-    [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
-        if (!user) {
-            NSLog(@"Uh oh. The user cancelled the Facebook login.");
-        } else if (user.isNew) {
-            NSLog(@"User signed up and logged in through Facebook!");
-        } else {
-            NSLog(@"User logged in through Facebook!");
-        }
-    }];
-    */
     
     return YES;
 }
