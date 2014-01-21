@@ -29,14 +29,16 @@
     PFLogInViewController *LoginViewController = [PFLogInViewController new];
     LoginViewController.fields = PFLogInFieldsFacebook;
     LoginViewController.title = @"Karma Police";
-    //LoginViewController.
+    LoginViewController.logInView.facebookButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:(UIControlEventTouchUpInside);
+    //@selector(loginButtonTouchHandler:)
     
     //LoginViewController.fields = PFLogInFieldsFacebookButton;
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:LoginViewController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    //[self presentModalViewController:logInController animated:YES];
+    
+    /*
     NSArray *permissions = @[@"email", @"read_friendlists"];
     [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
         if (!user) {
@@ -47,11 +49,34 @@
             NSLog(@"User logged in through Facebook!");
         }
     }];
-
+     */
     
     return YES;
 }
-							
+
+- (IBAction)loginButtonTouchHandler:(id)sender  {
+    // The permissions requested from the user
+    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location",@"email", @"read_friendlists"];
+    
+    // Login PFUser using Facebook
+    [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+        
+        if (!user) {
+            if (!error) {
+                NSLog(@"Uh oh. The user cancelled the Facebook login.");
+            } else {
+                NSLog(@"Uh oh. An error occurred: %@", error);
+            }
+        } else if (user.isNew) {
+            NSLog(@"User with facebook signed up and logged in!");
+            //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+        } else {
+            NSLog(@"User with facebook logged in!");
+            //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+        }
+    }];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
