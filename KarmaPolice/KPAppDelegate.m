@@ -9,6 +9,11 @@
 #import "KPAppDelegate.h"
 #import <Parse/Parse.h>
 
+/*
+view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) invite friends (5) me page (6) settings
+ (7) question page -directed from activity page(8) placeholder - while loading page
+*/
+
 @implementation KPAppDelegate
 
 
@@ -29,7 +34,7 @@
     PFLogInViewController *LoginViewController = [PFLogInViewController new];
     LoginViewController.fields = PFLogInFieldsFacebook;
     LoginViewController.title = @"Karma Police";
-    LoginViewController.logInView.facebookButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:(UIControlEventTouchUpInside);
+    [LoginViewController.logInView.facebookButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:UIControlEventTouchUpInside];
     //@selector(loginButtonTouchHandler:)
     
     //LoginViewController.fields = PFLogInFieldsFacebookButton;
@@ -49,7 +54,7 @@
             NSLog(@"User logged in through Facebook!");
         }
     }];
-     */
+    */
     
     return YES;
 }
