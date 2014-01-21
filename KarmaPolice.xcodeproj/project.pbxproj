@@ -17,7 +17,7 @@
 		2B31D50F1887DC2C00FE6E4A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D50E1887DC2C00FE6E4A /* Security.framework */; };
 		2B31D5111887DC3400FE6E4A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5101887DC3400FE6E4A /* StoreKit.framework */; };
 		2B31D5131887DC4000FE6E4A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5121887DC4000FE6E4A /* SystemConfiguration.framework */; };
-		2B31D5151887E78800FE6E4A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5141887E78800FE6E4A /* FacebookSDK.framework */; };
+		2B31D5151887E78800FE6E4A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B31D5141887E78800FE6E4A /* FacebookSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		2B4C76A31883F2FB00FD686D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A21883F2FB00FD686D /* Foundation.framework */; };
 		2B4C76A51883F2FB00FD686D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A41883F2FB00FD686D /* CoreGraphics.framework */; };
 		2B4C76A71883F2FB00FD686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A61883F2FB00FD686D /* UIKit.framework */; };
@@ -438,6 +438,18 @@
 					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/FacebookSDK",
 					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/KarmaPoliceTests",
 					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice",
+					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/Parse",
+					/Users/Elizabeth_Lambos/Dropbox/FEWD_GA/KarmaPolice/Parse,
+					/Users/Elizabeth_Lambos/Dropbox/FEWD_GA/KarmaPolice/KarmaPoliceTests,
+					/Users/Elizabeth_Lambos/Dropbox/FEWD_GA/KarmaPolice/FacebookSDK,
+					/Users/Elizabeth_Lambos/Dropbox/FEWD_GA/KarmaPolice,
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					$/KarmaPolice/FacebookSDK,
+					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/KarmaPoliceTests",
+					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice",
+					KarmaPolice/Parse,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KarmaPolice/KarmaPolice-Prefix.pch";
@@ -460,6 +472,7 @@
 					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/FacebookSDK",
 					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/KarmaPoliceTests",
 					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice",
+					"/Users/gil/Dropbox/Karma\\ Police/KarmaPolice/Parse",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KarmaPolice/KarmaPolice-Prefix.pch";
