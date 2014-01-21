@@ -23,11 +23,13 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [PFFacebookUtils initializeFacebook];
     
-    // Override point for customization after application launch.
+    // Override point for customization after application launch:
+    // Instance LoginViewController with Parse object:
     
     PFLogInViewController *LoginViewController = [PFLogInViewController new];
     LoginViewController.fields = PFLogInFieldsFacebook;
     LoginViewController.title = @"Karma Police";
+    //LoginViewController.
     
     //LoginViewController.fields = PFLogInFieldsFacebookButton;
     
@@ -35,6 +37,16 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     //[self presentModalViewController:logInController animated:YES];
+    NSArray *permissions = @[@"email", @"read_friendlists"];
+    [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
+        if (!user) {
+            NSLog(@"Uh oh. The user cancelled the Facebook login.");
+        } else if (user.isNew) {
+            NSLog(@"User signed up and logged in through Facebook!");
+        } else {
+            NSLog(@"User logged in through Facebook!");
+        }
+    }];
 
     
     return YES;
