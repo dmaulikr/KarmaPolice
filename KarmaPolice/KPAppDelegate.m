@@ -58,6 +58,8 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
             }
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
+            [self.window setRootViewController:UITabBarController];
+            
             //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
         } else {
             NSLog(@"User with facebook logged in!");
