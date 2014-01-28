@@ -66,9 +66,9 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
     }];
 }
 
-void navigate()
+- void navigate
 {
-    MyCustomViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"KPTabBarControllerMain"];
+    UITabBarController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"KPTabBarControllerMain"];
     
     [self presentViewController:vc animated:YES completion:nil];
 }
