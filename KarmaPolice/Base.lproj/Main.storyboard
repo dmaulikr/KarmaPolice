@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="NNf-Bj-GBi"/>
                         <viewControllerLayoutGuide type="bottom" id="bFv-VK-ccT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="GetKarma" id="yZ5-El-OoU" userLabel="GetKarma">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="GetKarmaViewController" id="yZ5-El-OoU" userLabel="GetKarma">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -35,7 +35,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="1NU-7y-hoa">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="IGm-dn-zWQ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="KPTabBarControllerMain" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IGm-dn-zWQ" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9P3-Be-70I">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
