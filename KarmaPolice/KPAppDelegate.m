@@ -59,6 +59,7 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
             //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+            [self KPNavigate:@"KPGetKarma"];
         } else {
             NSLog(@"User with facebook logged in!");
             //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
@@ -66,11 +67,16 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
     }];
 }
 
-- void navigate
+- (void) KPNavigate:(NSString *)viewControllerId
 {
-    UITabBarController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"KPTabBarControllerMain"];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"KPStoryboard" bundle: nil];
+    UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"KPGetKarma"];
     
-    [self presentViewController:vc animated:YES completion:nil];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    //[self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
