@@ -43,8 +43,8 @@
         NSString *gender = userData[@"gender"];
         //NSString *birthday = userData[@"birthday"];
         
-        NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
-        NSString *AllFBData =[NSString stringWithFormat:@"%@ %@ %@ %@", facebookID,name,location,gender];
+        NSString *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+        NSString *AllFBData =[NSString stringWithFormat:@"%@ %@ %@ %@", facebookID,name,location,pictureURL];
         NSLog(AllFBData);
                 // Now add the data to the UI elements
         [self loadImage:pictureURL];
@@ -53,9 +53,10 @@
     
 }
 
-- (void) loadImage:(NSURL *) imageURL{
-    NSString *url = [[NSString alloc] initWithFormat:imageURL];
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+- (void) loadImage:(NSString *) imageURL{
+    NSLog([NSString stringWithFormat:@"%@",imageURL]);
+    //NSString *url = [[NSString alloc] initWithFormat:imageURL];
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]]];
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(1*197+170, 1*350+25, 13, 13)];
     [imageView setImage:image];
