@@ -45,10 +45,12 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
 
 - (IBAction)loginButtonTouchHandler:(id)sender  {
     // The permissions requested from the user
-    NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location",@"email", @"read_friendlists"];
+    //NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location",@"email", @"read_friendlists"];
+    
+    NSArray *permissionsArray = @[];
     
     // Login PFUser using Facebook
-    [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
+    [PFFacebookUtils logInWithPermissions:permissionsArray  block:^(PFUser *user, NSError *error) {
         
         if (!user) {
             if (!error) {
@@ -58,11 +60,11 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
             }
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
-            //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
             [self KPNavigate:@"KPGetKarma"];
+            
         } else {
             NSLog(@"User with facebook logged in!");
-            //[self.navigationController pushViewController:[[UserDetailsViewController alloc] initWithStyle:UITableViewStyleGrouped] animated:YES];
+            [self KPNavigate:@"KPGetKarma"];
         }
     }];
 }
@@ -71,12 +73,9 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
 {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"KPStoryboard" bundle: nil];
     UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"KPGetKarma"];
-    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    //[self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
