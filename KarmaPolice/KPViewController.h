@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface KPViewController : UIViewController
-
 - (void) loadImage:(UIImage *) imageURL;
-
 @end
+
+
+@interface QuestionImage : UIImageView {
+    IBOutlet UIImageView *imageToDisplay;
+}
+@property (nonatomic, retain) IBOutlet UIImageView *imageToDisplay;
+@end
+
+
+

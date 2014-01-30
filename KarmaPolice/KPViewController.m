@@ -13,6 +13,24 @@
 
 @end
 
+@implementation QuestionImage
+
+@synthesize imageToDisplay;
+
+
+- (void) loadImage:(NSString *) imageURL{
+    NSLog([NSString stringWithFormat:@"%@",imageURL]);
+    //NSString *url = [[NSString alloc] initWithFormat:imageURL];
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]];
+    
+    //UIImageView *imageView = [[UIImageView alloc]initWith ];
+    
+    QuestionImage
+    
+}
+
+@end
+
 @implementation KPViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -51,15 +69,6 @@
     }];
     
     
-}
-
-- (void) loadImage:(NSString *) imageURL{
-    NSLog([NSString stringWithFormat:@"%@",imageURL]);
-    //NSString *url = [[NSString alloc] initWithFormat:imageURL];
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]]];
-    
-    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(1*197+170, 1*350+25, 13, 13)];
-    [imageView setImage:image];
 }
 
 - (void)didReceiveMemoryWarning
