@@ -33,6 +33,8 @@
 		2B4C76C71883F2FB00FD686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A61883F2FB00FD686D /* UIKit.framework */; };
 		2B4C76CF1883F2FB00FD686D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76CD1883F2FB00FD686D /* InfoPlist.strings */; };
 		2B4C76D11883F2FB00FD686D /* KarmaPoliceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76D01883F2FB00FD686D /* KarmaPoliceTests.m */; };
+		2B8A8701189913C100E36D7A /* KPStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8A8700189913C100E36D7A /* KPStoryboard.storyboard */; };
+		2B8A8707189A431500E36D7A /* KPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A8706189A431500E36D7A /* KPViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,9 @@
 		2B4C76CC1883F2FB00FD686D /* KarmaPoliceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KarmaPoliceTests-Info.plist"; sourceTree = "<group>"; };
 		2B4C76CE1883F2FB00FD686D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B4C76D01883F2FB00FD686D /* KarmaPoliceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KarmaPoliceTests.m; sourceTree = "<group>"; };
+		2B8A8700189913C100E36D7A /* KPStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = KPStoryboard.storyboard; path = ../KPStoryboard.storyboard; sourceTree = "<group>"; };
+		2B8A8705189A431500E36D7A /* KPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPViewController.h; sourceTree = "<group>"; };
+		2B8A8706189A431500E36D7A /* KPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +164,7 @@
 		2B4C76A81883F2FB00FD686D /* KarmaPolice */ = {
 			isa = PBXGroup;
 			children = (
+				2B8A8700189913C100E36D7A /* KPStoryboard.storyboard */,
 				2B4C76B11883F2FB00FD686D /* KPAppDelegate.h */,
 				2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */,
 				2B4C76B41883F2FB00FD686D /* Main.storyboard */,
@@ -168,6 +174,8 @@
 				2B4C76BB1883F2FB00FD686D /* KPSecondViewController.m */,
 				2B4C76BD1883F2FB00FD686D /* Images.xcassets */,
 				2B4C76A91883F2FB00FD686D /* Supporting Files */,
+				2B8A8705189A431500E36D7A /* KPViewController.h */,
+				2B8A8706189A431500E36D7A /* KPViewController.m */,
 			);
 			path = KarmaPolice;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 			files = (
 				2B4C76BE1883F2FB00FD686D /* Images.xcassets in Resources */,
 				2B4C76AD1883F2FB00FD686D /* InfoPlist.strings in Resources */,
+				2B8A8701189913C100E36D7A /* KPStoryboard.storyboard in Resources */,
 				2B4C76B61883F2FB00FD686D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +313,7 @@
 				2B4C76BC1883F2FB00FD686D /* KPSecondViewController.m in Sources */,
 				2B4C76AF1883F2FB00FD686D /* main.m in Sources */,
 				2B4C76B31883F2FB00FD686D /* KPAppDelegate.m in Sources */,
+				2B8A8707189A431500E36D7A /* KPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
