@@ -9,15 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @interface KPViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIView *GetKarmaViewController;
+
+@property (weak, nonatomic) IBOutlet UIImageView *KPAskerFBPhoto;
+
 - (void) loadImage:(UIImage *) imageURL;
+
+//@property (nonatomic, retain) IBOutlet UIImageView *imageToDisplay;
+
+
+
 @end
 
 
-@interface QuestionImage : UIImageView {
-    IBOutlet UIImageView *imageToDisplay;
-}
-@property (nonatomic, retain) IBOutlet UIImageView *imageToDisplay;
-@end
+
 
 
 

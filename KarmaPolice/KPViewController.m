@@ -13,10 +13,9 @@
 
 @end
 
-@implementation QuestionImage
+@implementation KPViewController
 
-@synthesize imageToDisplay;
-
+//@synthesize imageToDisplay;
 
 - (void) loadImage:(NSString *) imageURL{
     NSLog([NSString stringWithFormat:@"%@",imageURL]);
@@ -24,14 +23,9 @@
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]];
     
     //UIImageView *imageView = [[UIImageView alloc]initWith ];
-    
-    QuestionImage
-    
+    [_KPAskerFBPhoto setImage:image];
 }
 
-@end
-
-@implementation KPViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
