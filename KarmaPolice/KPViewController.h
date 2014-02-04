@@ -16,6 +16,13 @@
 
 - (void) loadImage:(UIImage *) imageURL;
 
+@property (weak, nonatomic) IBOutlet UITextField *txtQuestionField;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnSubmitQuestion;
+- (void) fetchQuestions:(id *) userID;
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+
 //@property (nonatomic, retain) IBOutlet UIImageView *imageToDisplay;
 
 
