@@ -26,6 +26,18 @@
     [_KPAskerFBPhoto setImage:image];
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [_txtQuestionField resignFirstResponder];
+}
+
+- (IBAction)ButtonTest:(id)sender {
+    PFObject *newQuestion = [PFObject objectWithClassName:@"TblQuestions"];
+    newQuestion[@"Question"] = _txtQuestionField.text;
+    PFUser *user = [PFUser currentUser];
+    newQuestion[@"UserId"] = user.objectId;
+    //newQuestion[@"cheatMode"] = @NO;
+    [newQuestion saveInBackground];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,9 +72,28 @@
         NSLog(AllFBData);
                 // Now add the data to the UI elements
         [self loadImage:pictureURL];
+        //[self fetchQuestions];
     }];
     
     
+}
+
+- (void) fetchQuestions{
+    PFQuery *query = [PFQuery queryWithClassName:@"QueryTable"];
+    //[query whereKey:@"user" equalTo: [PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
