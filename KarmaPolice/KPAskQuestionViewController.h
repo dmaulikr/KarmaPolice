@@ -1,5 +1,5 @@
 //
-//  KPFirstViewController.h
+//  KPSecondViewController.h
 //  KarmaPolice
 //
 //  Created by Gil Shulman on 1/13/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KPFirstViewController : UIViewController
+@interface KPAskQuestionViewController : UIViewController
 
 @end

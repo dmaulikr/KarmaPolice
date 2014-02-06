@@ -16,4 +16,6 @@
 
 - (void) KPNavigate:(NSString *)viewControllerId;
 
+- (void) saveUserFBData;
+
 @end

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Karma Police. All rights reserved.
 //
 
-#import "KPSecondViewController.h"
+#import "KPAskQuestionViewController.h"
 
-@interface KPSecondViewController ()
+@interface KPAskQuestionViewController ()
 
 @end
 
-@implementation KPSecondViewController
+@implementation KPAskQuestionViewController
 
 - (void)viewDidLoad
 {

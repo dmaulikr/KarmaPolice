@@ -60,6 +60,7 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
             }
         } else if (user.isNew) {
             NSLog(@"User with facebook signed up and logged in!");
+            [self saveUserFBData];
             [self KPNavigate:@"KPGetKarma"];
             
         } else {
@@ -71,11 +72,46 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
 
 - (void) KPNavigate:(NSString *)viewControllerId
 {
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"KPStoryboard" bundle: nil];
-    UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"KPGetKarma"];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    //UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"KPGetKarma"];
+    UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"KPAskQuestion"];
+    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+}
+
+- (void) saveUserFBData{
+    FBRequest *request = [FBRequest requestForMe];
+    
+    // Send request to Facebook
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        // handle response
+        // result is a dictionary with the user's Facebook data
+        NSDictionary *userData = (NSDictionary *)result;
+        
+        NSString *facebookID = userData[@"id"];
+        NSString *name = userData[@"name"];
+        NSString *location = userData[@"location"];
+        NSString *gender = userData[@"gender"];
+        //NSString *birthday = userData[@"birthday"];
+        
+        NSString *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+        NSString *AllFBData =[NSString stringWithFormat:@"%@ %@ %@ %@", facebookID,name,location,pictureURL];
+        
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:pictureURL]];
+        NSData *imageData = UIImagePNGRepresentation(image);
+        PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+        [imageFile saveInBackground];
+        
+        PFUser *user = [PFUser currentUser];
+        [user setObject:imageFile forKey:@"profilePic"];
+        [user setObject:pictureURL forKey:@"UserImageURL"];
+        [user setObject:name forKey:@"strUserName"];
+        //[user setObject:name forKey:@"strUserName"];
+        [user saveInBackground];
+    }];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
