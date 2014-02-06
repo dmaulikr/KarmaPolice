@@ -71,8 +71,9 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
 
 - (void) KPNavigate:(NSString *)viewControllerId
 {
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"KPStoryboard" bundle: nil];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"KPGetKarma"];
+    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

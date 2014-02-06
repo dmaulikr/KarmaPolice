@@ -1,18 +1,20 @@
 //
-//  KPFirstViewController.m
+//  KPGetKarmaViewController.m
 //  KarmaPolice
 //
 //  Created by Gil Shulman on 1/13/14.
 //  Copyright (c) 2014 Karma Police. All rights reserved.
 //
 
-#import "KPFirstViewController.h"
+#import "KPGetKarmaViewController.h"
+#import <Parse/Parse.h>
 
-@interface KPFirstViewController ()
+
+@interface KPGetKarmaViewController ()
 
 @end
 
-@implementation KPFirstViewController
+@implementation KPGetKarmaViewController
 
 - (void)viewDidLoad
 {
@@ -25,6 +27,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnYes:(id)sender {
+}
+
+- (IBAction)btnNo:(id)sender {
 }
 
 @end

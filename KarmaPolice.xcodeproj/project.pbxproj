@@ -25,7 +25,7 @@
 		2B4C76AF1883F2FB00FD686D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76AE1883F2FB00FD686D /* main.m */; };
 		2B4C76B31883F2FB00FD686D /* KPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */; };
 		2B4C76B61883F2FB00FD686D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76B41883F2FB00FD686D /* Main.storyboard */; };
-		2B4C76B91883F2FB00FD686D /* KPFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76B81883F2FB00FD686D /* KPFirstViewController.m */; };
+		2B4C76B91883F2FB00FD686D /* KPGetKarmaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76B81883F2FB00FD686D /* KPGetKarmaViewController.m */; };
 		2B4C76BC1883F2FB00FD686D /* KPSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76BB1883F2FB00FD686D /* KPSecondViewController.m */; };
 		2B4C76BE1883F2FB00FD686D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76BD1883F2FB00FD686D /* Images.xcassets */; };
 		2B4C76C51883F2FB00FD686D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76C41883F2FB00FD686D /* XCTest.framework */; };
@@ -70,8 +70,8 @@
 		2B4C76B11883F2FB00FD686D /* KPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPAppDelegate.h; sourceTree = "<group>"; };
 		2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPAppDelegate.m; sourceTree = "<group>"; };
 		2B4C76B51883F2FB00FD686D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2B4C76B71883F2FB00FD686D /* KPFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPFirstViewController.h; sourceTree = "<group>"; };
-		2B4C76B81883F2FB00FD686D /* KPFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPFirstViewController.m; sourceTree = "<group>"; };
+		2B4C76B71883F2FB00FD686D /* KPGetKarmaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPGetKarmaViewController.h; sourceTree = "<group>"; };
+		2B4C76B81883F2FB00FD686D /* KPGetKarmaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPGetKarmaViewController.m; sourceTree = "<group>"; };
 		2B4C76BA1883F2FB00FD686D /* KPSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPSecondViewController.h; sourceTree = "<group>"; };
 		2B4C76BB1883F2FB00FD686D /* KPSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPSecondViewController.m; sourceTree = "<group>"; };
 		2B4C76BD1883F2FB00FD686D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 				2B4C76B11883F2FB00FD686D /* KPAppDelegate.h */,
 				2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */,
 				2B4C76B41883F2FB00FD686D /* Main.storyboard */,
-				2B4C76B71883F2FB00FD686D /* KPFirstViewController.h */,
-				2B4C76B81883F2FB00FD686D /* KPFirstViewController.m */,
+				2B4C76B71883F2FB00FD686D /* KPGetKarmaViewController.h */,
+				2B4C76B81883F2FB00FD686D /* KPGetKarmaViewController.m */,
 				2B4C76BA1883F2FB00FD686D /* KPSecondViewController.h */,
 				2B4C76BB1883F2FB00FD686D /* KPSecondViewController.m */,
 				2B4C76BD1883F2FB00FD686D /* Images.xcassets */,
@@ -309,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B4C76B91883F2FB00FD686D /* KPFirstViewController.m in Sources */,
+				2B4C76B91883F2FB00FD686D /* KPGetKarmaViewController.m in Sources */,
 				2B4C76BC1883F2FB00FD686D /* KPSecondViewController.m in Sources */,
 				2B4C76AF1883F2FB00FD686D /* main.m in Sources */,
 				2B4C76B31883F2FB00FD686D /* KPAppDelegate.m in Sources */,
