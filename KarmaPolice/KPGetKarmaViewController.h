@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *txtQuestion;
 @property (weak, nonatomic) IBOutlet UIButton *btnYes;
 @property (weak, nonatomic) IBOutlet UIButton *btnNo;
+- (void) fetchQuestions;
+
 @end

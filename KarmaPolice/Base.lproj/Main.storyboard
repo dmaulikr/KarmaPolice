@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cfe-8E-f7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="-454"/>
+            <point key="canvasLocation" x="78" y="-483"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1NU-7y-hoa">
@@ -81,6 +81,7 @@
                     <connections>
                         <segue destination="mZx-xY-ygK" kind="relationship" relationship="viewControllers" id="ZBa-Ug-vdz"/>
                         <segue destination="il9-QE-b4I" kind="relationship" relationship="viewControllers" id="1DJ-cB-0yF"/>
+                        <segue destination="9qU-OY-Pbc" kind="relationship" relationship="viewControllers" id="BFu-Al-iYs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpW-Ma-JdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +105,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryq-gH-Q6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="199"/>
+            <point key="canvasLocation" x="78" y="177"/>
+        </scene>
+        <!--View Controller - Ask a Question-->
+        <scene sceneID="nXa-90-0ge">
+            <objects>
+                <viewController storyboardIdentifier="KPAskQuestion" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qU-OY-Pbc" customClass="KPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yg4-Cj-xOh"/>
+                        <viewControllerLayoutGuide type="bottom" id="yHW-zv-iwj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5wK-u0-m8t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RM-s7-hz3" userLabel="QuestionImage">
+                                <rect key="frame" x="13" y="56" width="112" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-3K-JlK">
+                                <rect key="frame" x="137" y="311" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ask!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonTest:" destination="9qU-OY-Pbc" eventType="touchUpInside" id="STk-P4-YJk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tG9-zn-CLW">
+                                <rect key="frame" x="28" y="257" width="264" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type A question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcw-3T-Btn">
+                                <rect key="frame" x="99" y="215" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask a question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2A-Bf-ZhP">
+                                <rect key="frame" x="99" y="38" width="114" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V53-eF-ZE1">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="b5z-RP-eMG"/>
+                                    <tabBarItem systemItem="more" id="0uy-Lm-v38"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ask a Question" id="gsw-0X-XaD"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="GetKarmaViewController" destination="5wK-u0-m8t" id="K12-Az-vEd"/>
+                        <outlet property="KPAskerFBPhoto" destination="6RM-s7-hz3" id="Ggs-FX-5jW"/>
+                        <outlet property="btnSubmitQuestion" destination="l9h-3K-JlK" id="Ltm-8R-4vJ"/>
+                        <outlet property="txtQuestionField" destination="tG9-zn-CLW" id="a8o-2O-eOG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSr-Ns-rd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="-483"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

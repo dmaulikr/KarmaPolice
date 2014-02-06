@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    [self fetchQuestions];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,6 +33,26 @@
 }
 
 - (IBAction)btnNo:(id)sender {
+}
+
+- (void) fetchQuestions{
+    PFQuery *query = [PFQuery queryWithClassName:@"TblQuestions"];
+    //[query whereKey:@"user" equalTo: [PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            // NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+               // NSLog(@"%@", object.objectId);
+                NSString *strQuestion = [object objectForKey:@"Question"];
+                _txtQuestion.text = strQuestion;
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
 }
 
 @end
