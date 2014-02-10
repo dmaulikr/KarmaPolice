@@ -92,26 +92,24 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
         
         NSString *facebookID = userData[@"id"];
         NSString *name = userData[@"name"];
-        NSString *location = userData[@"location"];
-        NSString *gender = userData[@"gender"];
-        //NSString *birthday = userData[@"birthday"];
-        
         NSString *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
-        NSString *AllFBData =[NSString stringWithFormat:@"%@ %@ %@ %@", facebookID,name,location,pictureURL];
+        //NSString *AllFBData =[NSString stringWithFormat:@"%@ %@ %@ %@", facebookID,name,location,pictureURL];
         
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:pictureURL]];
-        NSData *imageData = UIImagePNGRepresentation(image);
-        PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-        [imageFile saveInBackground];
+        PFQuery *userQuery = [PFQuery queryWithClassName:@"User"];
+        // Retrieve the object by id
+        PFObject *userObject = [PFUser currentUser];
+    
+        whereKey:@"user" equalTo:[PFObject objectWithoutDataWithClassName:@"User" objectId:[PFUser currentUser].objectId]];
         
-        PFUser *user = [PFUser currentUser];
-        [user setObject:imageFile forKey:@"profilePic"];
-        [user setObject:pictureURL forKey:@"UserImageURL"];
-        [user setObject:name forKey:@"strUserName"];
-        //[user setObject:name forKey:@"strUserName"];
-        [user saveInBackground];
+        
+        [userQuery getObjectInBackgroundWithId:userObject.objectId block:^(PFObject *userRecord, NSError *error) {
+            userRecord[@"UserImageURL"] = pictureURL;
+            userRecord[@"strUserName"] = name;
+            //user[@"cheatMode"] = @NO;
+            [userRecord saveInBackground];
+        }];
+        NSLog(@"Problem is:", error);
     }];
-
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
