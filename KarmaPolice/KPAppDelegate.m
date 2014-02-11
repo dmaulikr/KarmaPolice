@@ -91,28 +91,26 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
         NSDictionary *userData = (NSDictionary *)result;
         
         NSString *facebookID = userData[@"id"];
-        NSString *name = userData[@"name"];
-        NSString *location = userData[@"location"];
-        NSString *gender = userData[@"gender"];
-        //NSString *birthday = userData[@"birthday"];
-        
+        NSString *username = userData[@"name"];
         NSString *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
-        NSString *AllFBData =[NSString stringWithFormat:@"%@ %@ %@ %@", facebookID,name,location,pictureURL];
-        
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:pictureURL]];
-        NSData *imageData = UIImagePNGRepresentation(image);
-        PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
-        [imageFile saveInBackground];
-        
-        PFUser *user = [PFUser currentUser];
-        [user setObject:imageFile forKey:@"profilePic"];
-        [user setObject:pictureURL forKey:@"UserImageURL"];
-        [user setObject:name forKey:@"strUserName"];
-        //[user setObject:name forKey:@"strUserName"];
-        [user saveInBackground];
-    }];
 
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+        
+        // Retrieve the object by id
+        [query getObjectInBackgroundWithId:[PFUser currentUser].objectId block:^(PFObject *user, NSError *error) {
+            
+            // Now let's update it with some new data. In this case, only cheatMode and score
+            // will get sent to the cloud. playerName hasn't changed.
+            user[@"UserImageURL"] = [NSString stringWithFormat:@"%@", pictureURL];
+            user[@"strUserName"] = username;
+            [user saveInBackground];
+            
+        }];
+        
+    }];
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
