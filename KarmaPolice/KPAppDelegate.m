@@ -73,8 +73,9 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
 - (void) KPNavigate:(NSString *)viewControllerId
 {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    //UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"KPGetKarma"];
-    UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:@"KPAskQuestion"];
+    
+    //viewControllerId can be @"KPGetKarma" or @"KPAskQuestion":
+    UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:viewControllerId];
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -94,7 +95,6 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
         NSString *username = userData[@"name"];
         NSString *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
 
-        
         PFQuery *query = [PFQuery queryWithClassName:@"_User"];
         
         // Retrieve the object by id

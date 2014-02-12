@@ -18,7 +18,7 @@
 //@synthesize imageToDisplay;
 
 - (void) loadImage:(NSString *) imageURL{
-    NSLog([NSString stringWithFormat:@"%@",imageURL]);
+    //NSLog([NSString stringWithFormat:@"%@",imageURL]);
     //NSString *url = [[NSString alloc] initWithFormat:imageURL];
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageURL]];
     
