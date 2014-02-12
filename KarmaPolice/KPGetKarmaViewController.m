@@ -39,7 +39,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"TblQuestions"];
     //[query whereKey:@"user" equalTo: [PFUser currentUser]];
     __block UIImage *askerPhoto;
-    __block NSString *userPhotoUrl;
+    __block NSString *userPhotoUrlStr;
     __block NSString *strQuestionText;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -50,18 +50,19 @@
                // NSLog(@"%@", object.objectId);
                 strQuestionText = [object objectForKey:@"Question"];
                     PFQuery *uQuery = [PFQuery queryWithClassName:@"_User"];
-                    [uQuery whereKey:@"objectId" equalTo:[object objectForKey:@"objectId"]];
+                    NSString *AskerIdStr = [object objectForKey:@"UserId"];
+                    [uQuery whereKey:@"objectId" equalTo:AskerIdStr];
                     [uQuery getFirstObjectInBackgroundWithBlock:^(PFObject *userObject, NSError *error) {
                         if (!object) {
                             NSLog(@"The getFirstObject request failed.");
                         } else {
                             // The find succeeded.
                             NSLog(@"Successfully retrieved the object.");
-                            userPhotoUrl = [userObject objectForKey:@"UserImgURL"];
+                            userPhotoUrlStr = [userObject objectForKey:@"UserImgURL"];
                         }
                     }];
                 }
-                
+                NSURL *userPhotoUrl = [NSURL URLWithString:userPhotoUrlStr];
                 askerPhoto = [UIImage imageWithData:[NSData dataWithContentsOfURL:userPhotoUrl]];
                  _imgAskerFBPicture.image = askerPhoto;
                  _txtQuestion.text = strQuestionText;

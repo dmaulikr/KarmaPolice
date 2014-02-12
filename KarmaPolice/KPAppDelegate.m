@@ -65,7 +65,7 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
             
         } else {
             NSLog(@"User with facebook logged in!");
-            [self KPNavigate:@"KPGetKarma"];
+            [self KPNavigate:@"KPAskQuestion"];
         }
     }];
 }
