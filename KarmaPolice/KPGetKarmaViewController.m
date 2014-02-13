@@ -38,6 +38,9 @@
 - (void) fetchQuestions{
     PFQuery *query = [PFQuery queryWithClassName:@"TblQuestions"];
     //[query whereKey:@"user" equalTo: [PFUser currentUser]];
+    __block UIImage *askerPhoto;
+    __block NSString *userPhotoUrlStr;
+    __block NSString *strQuestionText;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.
@@ -45,14 +48,30 @@
             // Do something with the found objects
             for (PFObject *object in objects) {
                // NSLog(@"%@", object.objectId);
-                NSString *strQuestion = [object objectForKey:@"Question"];
-                _txtQuestion.text = strQuestion;
-            }
+                strQuestionText = [object objectForKey:@"Question"];
+                    PFQuery *uQuery = [PFQuery queryWithClassName:@"_User"];
+                    NSString *AskerIdStr = [object objectForKey:@"UserId"];
+                    PFObject *userObject = [uQuery getObjectWithId:AskerIdStr];
+                    //[uQuery whereKey:@"objectId" equalTo:AskerIdStr];
+                    //[uQuery getFirstObjectInBackgroundWithBlock:^(PFObject *userObject, NSError *error) {
+                        if (!userObject) {
+                            NSLog(@"The getFirstObject request failed.");
+                        } else {
+                            // The find succeeded.
+                            NSLog(@"Successfully retrieved the object.");
+                            userPhotoUrlStr = [userObject objectForKey:@"UserImageURL"];
+                        }
+                    }
+        
+                NSURL *userPhotoUrl = [NSURL URLWithString:userPhotoUrlStr];
+                askerPhoto = [UIImage imageWithData:[NSData dataWithContentsOfURL:userPhotoUrl]];
+                 _imgAskerFBPicture.image = askerPhoto;
+                 _txtQuestion.text = strQuestionText;
+        
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+        }}];
 }
 
 @end
