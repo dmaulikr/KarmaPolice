@@ -51,27 +51,27 @@
                 strQuestionText = [object objectForKey:@"Question"];
                     PFQuery *uQuery = [PFQuery queryWithClassName:@"_User"];
                     NSString *AskerIdStr = [object objectForKey:@"UserId"];
-                    [uQuery whereKey:@"objectId" equalTo:AskerIdStr];
-                    [uQuery getFirstObjectInBackgroundWithBlock:^(PFObject *userObject, NSError *error) {
-                        if (!object) {
+                    PFObject *userObject = [uQuery getObjectWithId:AskerIdStr];
+                    //[uQuery whereKey:@"objectId" equalTo:AskerIdStr];
+                    //[uQuery getFirstObjectInBackgroundWithBlock:^(PFObject *userObject, NSError *error) {
+                        if (!userObject) {
                             NSLog(@"The getFirstObject request failed.");
                         } else {
                             // The find succeeded.
                             NSLog(@"Successfully retrieved the object.");
-                            userPhotoUrlStr = [userObject objectForKey:@"UserImgURL"];
+                            userPhotoUrlStr = [userObject objectForKey:@"UserImageURL"];
                         }
-                    }];
-                }
+                    }
+        
                 NSURL *userPhotoUrl = [NSURL URLWithString:userPhotoUrlStr];
                 askerPhoto = [UIImage imageWithData:[NSData dataWithContentsOfURL:userPhotoUrl]];
                  _imgAskerFBPicture.image = askerPhoto;
                  _txtQuestion.text = strQuestionText;
-            }
-         else {
+        
+        } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
+        }}];
 }
 
 @end
