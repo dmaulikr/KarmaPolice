@@ -65,21 +65,24 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
             
         } else {
             NSLog(@"User with facebook logged in!");
-            [self KPNavigate:@"KPGetKarma"];
+            [self KPNavigate:@"KPTabBarControllerMain"];
         }
     }];
 }
 
 - (void) KPNavigate:(NSString *)viewControllerId
 {
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
-    //viewControllerId can be @"KPGetKarma" or @"KPAskQuestion":
-    UITabBarController *vc = [mainStoryboard instantiateViewControllerWithIdentifier:viewControllerId];
+    //viewControllerId can be @"KPGetKarma" or @"KPAskQuestion" or "KPTabBarControllerMain":
+    
+     UITabBarController *vc = [storyboard instantiateViewControllerWithIdentifier:viewControllerId];
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+     
+    
 }
 
 - (void) saveUserFBData{

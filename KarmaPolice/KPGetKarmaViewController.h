@@ -11,8 +11,21 @@
 @interface KPGetKarmaViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imgAskerFBPicture;
 @property (weak, nonatomic) IBOutlet UILabel *txtQuestion;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnYes;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnNo;
-- (void) fetchQuestions;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblResults;
+
+extern int questionIndex;
+extern bool blnShowQuestion;
+extern NSString* AskerUID;
+extern NSString* QuestionId;
+
+
+- (void) showQuestion;
+
+- (void) saveAnswer:(BOOL *) answer;
 
 @end

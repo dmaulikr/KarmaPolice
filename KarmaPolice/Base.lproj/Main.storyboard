@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Karme View Controller V1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prI-MO-zJN" colorLabel="IBBuiltInLabel-Blue">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Karme (Samarkand Font Needed)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="prI-MO-zJN" colorLabel="IBBuiltInLabel-Blue">
                                 <rect key="frame" x="56" y="7" width="255" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -27,40 +27,56 @@
                                 <rect key="frame" x="96" y="78" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Text Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJV-SO-pxI">
-                                <rect key="frame" x="28" y="235" width="267" height="66"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Text Here" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJV-SO-pxI">
+                                <rect key="frame" x="27" y="233" width="267" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH3-NK-ePX">
-                                <rect key="frame" x="59" y="352" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btnYes" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEc-nF-QkR">
+                                <rect key="frame" x="47" y="386" width="63" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="V">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="YES" backgroundImage="tanButton.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="tanButtonHighlight.png"/>
                                 <connections>
-                                    <action selector="btnYes:" destination="mZx-xY-ygK" eventType="touchUpInside" id="iUp-lV-6Vg"/>
+                                    <action selector="btnNo:" destination="mZx-xY-ygK" eventType="touchUpInside" id="g6d-A4-fF9"/>
+                                    <action selector="btnYes:" destination="mZx-xY-ygK" eventType="touchUpInside" id="APW-Qc-VrZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e1-nt-W45">
-                                <rect key="frame" x="217" y="352" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btnNo" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe8-Hk-gvH">
+                                <rect key="frame" x="208" y="388" width="63" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="X">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="NO" backgroundImage="tanButton.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="tanButtonHighlight.png"/>
                                 <connections>
-                                    <action selector="btnNo:" destination="mZx-xY-ygK" eventType="touchUpInside" id="TaG-6f-A73"/>
+                                    <action selector="btnNo:" destination="mZx-xY-ygK" eventType="touchUpInside" id="faw-TS-ICq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWa-Lk-C0j">
+                                <rect key="frame" x="139" y="342" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Get Karma" id="P8e-6o-9KR"/>
+                    <tabBarItem key="tabBarItem" title="Get Karma" image="getkarma.png" id="P8e-6o-9KR"/>
                     <connections>
-                        <outlet property="btnNo" destination="7e1-nt-W45" id="Hmn-Vz-bPu"/>
-                        <outlet property="btnYes" destination="SH3-NK-ePX" id="ONl-lp-HKG"/>
+                        <outlet property="btnNo" destination="pe8-Hk-gvH" id="Kvw-Ni-TW6"/>
+                        <outlet property="btnYes" destination="oEc-nF-QkR" id="o8g-f9-KBe"/>
                         <outlet property="imgAskerFBPicture" destination="IxI-Y4-Xlk" id="aTe-zz-Cct"/>
+                        <outlet property="lblResults" destination="KWa-Lk-C0j" id="ofv-ap-T2g"/>
                         <outlet property="txtQuestion" destination="nJV-SO-pxI" id="EnU-jf-k8o"/>
                     </connections>
                 </viewController>
@@ -88,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="-292" y="-127"/>
         </scene>
-        <!--View Controller - New Query-->
+        <!--View Controller - My Karma-->
         <scene sceneID="P1L-rd-sCg">
             <objects>
                 <viewController id="il9-QE-b4I" sceneMemberID="viewController">
@@ -101,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New Query" id="JZe-3B-DnM"/>
+                    <tabBarItem key="tabBarItem" title="My Karma" image="mykarma.png" id="JZe-3B-DnM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryq-gH-Q6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,27 +136,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RM-s7-hz3" userLabel="QuestionImage">
-                                <rect key="frame" x="13" y="56" width="112" height="102"/>
+                                <rect key="frame" x="28" y="75" width="112" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-3K-JlK">
-                                <rect key="frame" x="137" y="311" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9h-3K-JlK">
+                                <rect key="frame" x="78" y="263" width="164" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ask!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Create query!" backgroundImage="whiteButton.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="whiteButtonHighlight.png"/>
                                 <connections>
                                     <action selector="ButtonTest:" destination="9qU-OY-Pbc" eventType="touchUpInside" id="STk-P4-YJk"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tG9-zn-CLW">
-                                <rect key="frame" x="28" y="257" width="264" height="30"/>
+                                <rect key="frame" x="28" y="214" width="264" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type A question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcw-3T-Btn">
-                                <rect key="frame" x="99" y="215" width="123" height="21"/>
+                                <rect key="frame" x="99" y="185" width="123" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -165,7 +183,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ask a Question" id="gsw-0X-XaD"/>
+                    <tabBarItem key="tabBarItem" title="Ask a Question" image="newquery.png" id="gsw-0X-XaD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="GetKarmaViewController" destination="5wK-u0-m8t" id="K12-Az-vEd"/>
@@ -179,6 +197,15 @@
             <point key="canvasLocation" x="424" y="-483"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="getkarma.png" width="35" height="39"/>
+        <image name="mykarma.png" width="39" height="38"/>
+        <image name="newquery.png" width="42" height="38"/>
+        <image name="tanButton.png" width="36" height="36"/>
+        <image name="tanButtonHighlight.png" width="36" height="36"/>
+        <image name="whiteButton.png" width="36" height="36"/>
+        <image name="whiteButtonHighlight.png" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
