@@ -26,7 +26,7 @@ NSString* QuestionId;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    _txtResults.hidden = YES;
     blnShowQuestion = true;
     questionIndex = 0;
     [self showQuestion];
@@ -38,31 +38,30 @@ NSString* QuestionId;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnYes:(id)sender {
-    [self saveAnswer:YES];
-    
-    //TODO - Show answers results
-    _lblResults = @"TEST TEST";
-    
+
+- (IBAction)txtResults:(id)sender {
+    _txtResults.hidden = YES;
     blnShowQuestion = true;
     [self showQuestion];
+}
+
+- (IBAction)btnYes:(id)sender {
+    [self postAnswerHandler:YES];
 }
 
 
 - (IBAction)btnNo:(id)sender {
-    [self saveAnswer:NO];
-    blnShowQuestion = true;
-    [self showQuestion];
+    [self postAnswerHandler:NO];
 }
 
-// GS: TODO
-
-// Fetch All Relevant Questions to display into an array
-// Display the first question
-// Write the answer
-// Move to the next one
-// Check that there are questions left
-
+- (void) postAnswerHandler: (BOOL *) answer{
+    _btnYes.hidden = YES;
+    _btnNo.hidden = YES;
+    [self saveAnswer:answer];
+    [_txtResults setTitle:[self getStat] forState:UIControlStateNormal];
+    _txtResults.hidden = NO;
+ 
+}
 
 - (void) showQuestion {
     PFQuery *query = [PFQuery queryWithClassName:@"TblQuestions"];
@@ -102,6 +101,9 @@ NSString* QuestionId;
             _txtQuestion.text = strQuestionText;
             blnShowQuestion = false;
             questionIndex++;
+            // Show the buttons again:
+            _btnYes.hidden = NO;
+            _btnNo.hidden = NO;
             }
         } else {
             // Log details of the failure
@@ -123,5 +125,23 @@ NSString* QuestionId;
     [newAnswer saveInBackground];
 }
 
+- (NSString *) getStat{
+    
+    __block int totalNumberofAnswers;
+    __block int totalNumberofYes;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"TblAnswers"];
+    [query whereKey:@"QuestionId" equalTo:QuestionId];
+    totalNumberofAnswers = query.countObjects;
+    
+    [query whereKey:@"Answer" equalTo:[NSNumber numberWithBool:YES]];
+    totalNumberofYes =  query.countObjects;
+    
+    NSInteger percentageSaidYes;
+    percentageSaidYes = (int)((float)totalNumberofYes/(float)totalNumberofAnswers*100);
+    NSNumber *percentageSaidYesforDisplay = [[NSNumber alloc] initWithInt:percentageSaidYes];
+    
+    return [NSString stringWithFormat:@"%@/%@/%@", percentageSaidYesforDisplay, @"% Said Yes  ", @"Click here to move to the next question"];
+}
 
 @end

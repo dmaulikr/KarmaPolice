@@ -11,12 +11,9 @@
 @interface KPGetKarmaViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imgAskerFBPicture;
 @property (weak, nonatomic) IBOutlet UILabel *txtQuestion;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnYes;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnNo;
-
-@property (weak, nonatomic) IBOutlet UILabel *lblResults;
+@property (weak, nonatomic) IBOutlet UIButton *txtResults;
 
 extern int questionIndex;
 extern bool blnShowQuestion;
@@ -27,5 +24,9 @@ extern NSString* QuestionId;
 - (void) showQuestion;
 
 - (void) saveAnswer:(BOOL *) answer;
+
+- (NSString *) getStat;
+
+- (void) postAnswerHandler: (BOOL *) answer;
 
 @end
