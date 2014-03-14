@@ -107,6 +107,7 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
             // will get sent to the cloud. playerName hasn't changed.
             user[@"UserImageURL"] = [NSString stringWithFormat:@"%@", pictureURL];
             user[@"strUserName"] = username;
+            user[@"KarmaPoints"] = [NSNumber numberWithInt:0];
             [user saveInBackground];
             
         }];

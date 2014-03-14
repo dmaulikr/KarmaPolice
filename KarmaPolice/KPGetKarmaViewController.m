@@ -30,6 +30,12 @@ NSString* QuestionId;
     blnShowQuestion = true;
     questionIndex = 0;
     [self showQuestion];
+    // Display current Karma Points:
+    PFUser *currentUser = [PFUser currentUser];
+    NSNumber *karmaPoints;
+    karmaPoints = currentUser[@"KarmaPoints"];
+    NSInteger intKarmaPoints = [karmaPoints integerValue];
+    _KarmaPoints.text = [NSString stringWithFormat:@"%d", intKarmaPoints];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,12 +52,13 @@ NSString* QuestionId;
 }
 
 - (IBAction)btnYes:(id)sender {
-    [self postAnswerHandler:YES];
+    [self postAnswerHandler:(BOOL*)YES];
 }
 
-
 - (IBAction)btnNo:(id)sender {
-    [self postAnswerHandler:NO];
+    if(sender == self.btnNo){
+        [self postAnswerHandler:NO];
+    }
 }
 
 - (void) postAnswerHandler: (BOOL *) answer{
@@ -60,7 +67,7 @@ NSString* QuestionId;
     [self saveAnswer:answer];
     [_txtResults setTitle:[self getStat] forState:UIControlStateNormal];
     _txtResults.hidden = NO;
- 
+    [self updateKarmaPoints];
 }
 
 - (void) showQuestion {
@@ -69,6 +76,7 @@ NSString* QuestionId;
     __block UIImage *askerPhoto;
     __block NSString *userPhotoUrlStr;
     __block NSString *strQuestionText;
+    __block NSString *strAskerName;
     
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"UserId" notEqualTo:user.objectId];
@@ -93,12 +101,14 @@ NSString* QuestionId;
                             // The find succeeded.
                             NSLog(@"Successfully retrieved the object.");
                             userPhotoUrlStr = [userObject objectForKey:@"UserImageURL"];
+                            strAskerName = [userObject objectForKey:@"strUserName"];
                         }
                 
             NSURL *userPhotoUrl = [NSURL URLWithString:userPhotoUrlStr];
             askerPhoto = [UIImage imageWithData:[NSData dataWithContentsOfURL:userPhotoUrl]];
             _imgAskerFBPicture.image = askerPhoto;
             _txtQuestion.text = strQuestionText;
+            _lblUserName.text = strAskerName;
             blnShowQuestion = false;
             questionIndex++;
             // Show the buttons again:
@@ -141,7 +151,19 @@ NSString* QuestionId;
     percentageSaidYes = (int)((float)totalNumberofYes/(float)totalNumberofAnswers*100);
     NSNumber *percentageSaidYesforDisplay = [[NSNumber alloc] initWithInt:percentageSaidYes];
     
-    return [NSString stringWithFormat:@"%@/%@/%@", percentageSaidYesforDisplay, @"% Said Yes  ", @"Click here to move to the next question"];
+    return [NSString stringWithFormat:@"%@%@\r\r%@", percentageSaidYesforDisplay, @"% Said Yes", @"Click here to see the next question!"];
+}
+
+- (void) updateKarmaPoints{
+    
+    PFUser *currentUser = [PFUser currentUser];
+    NSNumber *karmaPoints;
+    karmaPoints = currentUser[@"KarmaPoints"];
+    NSInteger intKarmaPoints = [karmaPoints integerValue];
+    intKarmaPoints++;
+    currentUser[@"KarmaPoints"] = [NSNumber numberWithInt:intKarmaPoints];
+    [currentUser save];
+    _KarmaPoints.text = [NSString stringWithFormat:@"%d", intKarmaPoints];
 }
 
 @end

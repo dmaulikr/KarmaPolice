@@ -12,8 +12,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgAskerFBPicture;
 @property (weak, nonatomic) IBOutlet UILabel *txtQuestion;
 @property (weak, nonatomic) IBOutlet UIButton *btnYes;
+
 @property (weak, nonatomic) IBOutlet UIButton *btnNo;
+
 @property (weak, nonatomic) IBOutlet UIButton *txtResults;
+@property (weak, nonatomic) IBOutlet UILabel *lblUserName;
+@property (weak, nonatomic) IBOutlet UILabel *KarmaPoints;
+
 
 extern int questionIndex;
 extern bool blnShowQuestion;
@@ -28,5 +33,7 @@ extern NSString* QuestionId;
 - (NSString *) getStat;
 
 - (void) postAnswerHandler: (BOOL *) answer;
+
+- (void) updateKarmaPoints;
 
 @end
