@@ -17,18 +17,24 @@
 
 @interface KPViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, MBProgressHUDDelegate>
 {
-    IBOutlet UIScrollView *photoScrollView;
-    NSMutableArray *allImages;
+    // IBOutlet UIScrollView *photoScrollView;
+    // NSMutableArray *allImages;
     
     MBProgressHUD *HUD;
     MBProgressHUD *refreshHUD;
 }
 
+
+ 
 - (IBAction)refresh:(id)sender;
 - (IBAction)cameraButtonTapped:(id)sender;
 - (void)uploadImage:(NSData *)imageData;
-- (void)setUpImages:(NSArray *)images;
+
+- (void)uploadImage:(NSData *)imageData; // :(NSString *) questionId;
+
 - (void)buttonTouched:(id)sender;
+
+extern NSData* questionImageData;
 
 
 @property (strong, nonatomic) IBOutlet UIView *GetKarmaViewController;

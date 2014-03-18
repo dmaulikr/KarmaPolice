@@ -91,6 +91,23 @@ NSString* QuestionId;
                 strQuestionText = [object objectForKey:@"Question"];
                 AskerUID = [object objectForKey:@"UserId"];
                 QuestionId = object.objectId;
+                
+                @try {
+                    PFFile *theImage = [object objectForKey:@"imageFile"];
+                    NSData *imageData = [theImage getData];
+                    UIImage *image = [UIImage imageWithData:imageData];
+                    _imgAskerFBPicture.image = image;
+                }
+                @catch (NSException * e) {
+                    NSLog(@"Exception: %@", e);
+                    //Show a default image here or change background color
+                }
+                @finally {
+                    NSLog(@"finally");
+                }
+                
+              
+                
                     PFQuery *uQuery = [PFQuery queryWithClassName:@"_User"];
                     NSString *AskerIdStr = [object objectForKey:@"UserId"];
                     PFObject *userObject = [uQuery getObjectWithId:AskerIdStr];
@@ -106,7 +123,7 @@ NSString* QuestionId;
                 
             NSURL *userPhotoUrl = [NSURL URLWithString:userPhotoUrlStr];
             askerPhoto = [UIImage imageWithData:[NSData dataWithContentsOfURL:userPhotoUrl]];
-            _imgAskerFBPicture.image = askerPhoto;
+            // _imgAskerFBPicture.image = askerPhoto;
             _txtQuestion.text = strQuestionText;
             _lblUserName.text = strAskerName;
             blnShowQuestion = false;

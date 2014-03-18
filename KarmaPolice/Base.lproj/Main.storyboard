@@ -229,7 +229,6 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="addImage:" destination="9qU-OY-Pbc" eventType="touchUpInside" id="Zxz-eq-Loj"/>
                                     <action selector="cameraButtonTapped:" destination="9qU-OY-Pbc" eventType="touchUpInside" id="tkE-d1-sIw"/>
                                 </connections>
                             </button>

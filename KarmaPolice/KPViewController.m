@@ -12,6 +12,8 @@
 
 @end
 
+NSData* questionImageData;
+
 @implementation KPViewController
 
 //@synthesize imageToDisplay;
@@ -36,12 +38,16 @@
 }
 
 - (IBAction)ButtonTest:(id)sender {
+   /*
     PFObject *newQuestion = [PFObject objectWithClassName:@"TblQuestions"];
     newQuestion[@"Question"] = _txtQuestionField.text;
     PFUser *user = [PFUser currentUser];
     newQuestion[@"UserId"] = user.objectId;
     //newQuestion[@"cheatMode"] = @NO;
     [newQuestion saveInBackground];
+    */
+    // Upload image and save all question data:
+    [self uploadImage:questionImageData ]; //:newQuestion.objectId];
 }
 - (IBAction)cameraButtonTapped:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:
@@ -81,14 +87,16 @@
                 break;
         }
         
+        image = [UIImage imageNamed:@"Crossfit.png"];
+        
         // Resize image
         UIGraphicsBeginImageContext(CGSizeMake(640, 960));
         [image drawInRect: CGRectMake(0, 0, 640, 960)];
         UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
-        NSData *imageData = UIImageJPEGRepresentation(image, 0.05f);
-        [self uploadImage:imageData];
+        questionImageData = UIImageJPEGRepresentation(image, 0.05f);
+        //[self uploadImage:imageData];
     }
 }
 
@@ -107,11 +115,11 @@
     UIGraphicsEndImageContext();
     
     // Upload image
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.05f);
-    [self uploadImage:imageData];
+    questionImageData = UIImageJPEGRepresentation(image, 0.05f);
+    //[self uploadImage:imageData];
 }
 
-- (void)uploadImage:(NSData *)imageData{
+- (void)uploadImage:(NSData *)imageData {
     PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
     
     //HUD creation here (see example for code)
@@ -122,26 +130,30 @@
             // Hide old HUD, show completed HUD (see example for code)
             
             // Create a PFObject around a PFFile and associate it with the current user
-            PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-            [userPhoto setObject:imageFile forKey:@"imageFile"];
+            
+            PFObject *newQuestion = [PFObject objectWithClassName:@"TblQuestions"];
+            newQuestion[@"Question"] = _txtQuestionField.text;
+            PFUser *user = [PFUser currentUser];
+            newQuestion[@"UserId"] = user.objectId;
+            
+            [newQuestion setObject:imageFile forKey:@"imageFile"];
             
             // Set the access control list to current user for security purposes
-            userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+            // userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
             
-            PFUser *user = [PFUser currentUser];
-            [userPhoto setObject:user forKey:@"user"];
+            // PFUser *user = [PFUser currentUser];
+            // [userPhoto setObject:user forKey:@"user"];
             
-            [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            [newQuestion saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error) {
-                    [self refresh:nil];
+                    //[self refresh:nil];
                 }
                 else{
                     // Log details of the failure
                     NSLog(@"Error: %@ %@", error, [error userInfo]);
                 }
             }];
-        }
-        else{
+        } else {
             [HUD hide:YES];
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
