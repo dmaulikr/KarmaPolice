@@ -18,4 +18,6 @@
 
 - (void) saveUserFBData;
 
+- (void) saveUsersFriends;
+
 @end
