@@ -50,6 +50,10 @@ extern NSData* questionImageData;
 
 @property (weak, nonatomic) IBOutlet UITextView *txtQuestionField;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *btnAnonymously;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *btnShowQuestionTo;
+
+
 - (void)hudWasHidden:(MBProgressHUD *)hud;
 
 //@property (nonatomic, retain) IBOutlet UIImageView *imageToDisplay;

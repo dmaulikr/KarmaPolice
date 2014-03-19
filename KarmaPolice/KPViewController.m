@@ -38,17 +38,18 @@ NSData* questionImageData;
 }
 
 - (IBAction)ButtonTest:(id)sender {
-   /*
-    PFObject *newQuestion = [PFObject objectWithClassName:@"TblQuestions"];
-    newQuestion[@"Question"] = _txtQuestionField.text;
-    PFUser *user = [PFUser currentUser];
-    newQuestion[@"UserId"] = user.objectId;
-    //newQuestion[@"cheatMode"] = @NO;
-    [newQuestion saveInBackground];
-    */
     // Upload image and save all question data:
     [self uploadImage:questionImageData ]; //:newQuestion.objectId];
 }
+
+- (IBAction)btnAnonymously:(id)sender {
+}
+
+- (IBAction)btnShowQuestionTo:(id)sender {
+}
+
+
+
 - (IBAction)cameraButtonTapped:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:
          UIImagePickerControllerSourceTypeCamera] == YES){
@@ -69,25 +70,23 @@ NSData* questionImageData;
         int r = arc4random() % 5;
         switch (r) {
             case 0:
-                image = [UIImage imageNamed:@"ParseLogo.jpg"];
+                image = [UIImage imageNamed:@"Crossfit.png"];
                 break;
             case 1:
-                image = [UIImage imageNamed:@"Crowd.jpg"];
+                image = [UIImage imageNamed:@"natan.jpg"];
                 break;
             case 2:
-                image = [UIImage imageNamed:@"Desert.jpg"];
+                image = [UIImage imageNamed:@"lingos.png"];
                 break;
             case 3:
-                image = [UIImage imageNamed:@"Lime.jpg"];
+                image = [UIImage imageNamed:@"tlv.jpg"];
                 break;
             case 4:
-                image = [UIImage imageNamed:@"Sunflowers.jpg"];
+                image = [UIImage imageNamed:@"libi.jpg"];
                 break;
             default:
                 break;
         }
-        
-        image = [UIImage imageNamed:@"Crossfit.png"];
         
         // Resize image
         UIGraphicsBeginImageContext(CGSizeMake(640, 960));
@@ -136,13 +135,18 @@ NSData* questionImageData;
             PFUser *user = [PFUser currentUser];
             newQuestion[@"UserId"] = user.objectId;
             
+            NSInteger askAnonymously = _btnAnonymously.selectedSegmentIndex;
+            NSInteger fbFriendsOnly = _btnShowQuestionTo.selectedSegmentIndex;
+            BOOL AA = askAnonymously == 0;
+            BOOL allKP = fbFriendsOnly == 0;
+            
+            newQuestion[@"askAnonymously"] = [NSNumber numberWithBool:AA];
+            newQuestion[@"allKP"] = [NSNumber numberWithBool:allKP];
+            
             [newQuestion setObject:imageFile forKey:@"imageFile"];
             
             // Set the access control list to current user for security purposes
             // userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
-            
-            // PFUser *user = [PFUser currentUser];
-            // [userPhoto setObject:user forKey:@"user"];
             
             [newQuestion saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (!error) {

@@ -96,7 +96,7 @@ NSString* QuestionId;
                     PFFile *theImage = [object objectForKey:@"imageFile"];
                     NSData *imageData = [theImage getData];
                     UIImage *image = [UIImage imageWithData:imageData];
-                    _imgAskerFBPicture.image = image;
+                    _questionImage.image = image;
                 }
                 @catch (NSException * e) {
                     NSLog(@"Exception: %@", e);
@@ -123,7 +123,7 @@ NSString* QuestionId;
                 
             NSURL *userPhotoUrl = [NSURL URLWithString:userPhotoUrlStr];
             askerPhoto = [UIImage imageWithData:[NSData dataWithContentsOfURL:userPhotoUrl]];
-            // _imgAskerFBPicture.image = askerPhoto;
+            _imgAskerFBPicture.image = askerPhoto;
             _txtQuestion.text = strQuestionText;
             _lblUserName.text = strAskerName;
             blnShowQuestion = false;

@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *txtResults;
 @property (weak, nonatomic) IBOutlet UILabel *lblUserName;
 @property (weak, nonatomic) IBOutlet UILabel *KarmaPoints;
+@property (weak, nonatomic) IBOutlet UIImageView *questionImage;
 
 
 extern int questionIndex;
