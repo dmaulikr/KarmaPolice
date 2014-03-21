@@ -39,5 +39,7 @@ extern NSString* QuestionId;
 
 - (BOOL)searchArray:(NSArray *)array forObject:(id)object;
 
+- (BOOL)askerIsFriend;
+
 
 @end
