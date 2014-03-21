@@ -77,9 +77,13 @@ NSString* QuestionId;
     __block NSString *userPhotoUrlStr;
     __block NSString *strQuestionText;
     __block NSString *strAskerName;
+    __block NSNumber *askAnonymously;
+    __block NSNumber *allKP;
+    
     
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"UserId" notEqualTo:user.objectId];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error && objects.count > questionIndex) {
             // The find succeeded.
@@ -90,6 +94,27 @@ NSString* QuestionId;
                // NSLog(@"%@", object.objectId);
                 strQuestionText = [object objectForKey:@"Question"];
                 AskerUID = [object objectForKey:@"UserId"];
+                
+                askAnonymously = [object objectForKey:@"askAnonymously"];
+                allKP = [object objectForKey:@"allKP"];
+                
+                if([allKP isEqualToNumber:@0]){
+                    
+                    __block NSString* AskerFacebookId;
+                    
+                    PFQuery *usersQuery= [PFUser query];
+                    
+                    PFObject *userObject = [usersQuery getObjectWithId:AskerUID];
+                    
+                    AskerFacebookId = [userObject objectForKey:@"facebookId"];
+                    
+                    NSArray *friends = [user objectForKey:@"freinds"];
+                    
+                    BOOL isFriend = [self searchArray:friends forObject:AskerFacebookId]; //[friends[@"id"] containsObject:AskerFacebookId];
+                    NSLog(@"isFriend:%i", isFriend);
+                    
+                }
+                
                 QuestionId = object.objectId;
                 
                 @try {
@@ -106,8 +131,6 @@ NSString* QuestionId;
                     NSLog(@"finally");
                 }
                 
-              
-                
                     PFQuery *uQuery = [PFQuery queryWithClassName:@"_User"];
                     NSString *AskerIdStr = [object objectForKey:@"UserId"];
                     PFObject *userObject = [uQuery getObjectWithId:AskerIdStr];
@@ -123,9 +146,18 @@ NSString* QuestionId;
                 
             NSURL *userPhotoUrl = [NSURL URLWithString:userPhotoUrlStr];
             askerPhoto = [UIImage imageWithData:[NSData dataWithContentsOfURL:userPhotoUrl]];
-            _imgAskerFBPicture.image = askerPhoto;
+
             _txtQuestion.text = strQuestionText;
-            _lblUserName.text = strAskerName;
+            
+            if([askAnonymously isEqualToNumber:@0]){
+                _imgAskerFBPicture.image = askerPhoto;
+                _lblUserName.text = strAskerName;
+                _imgAskerFBPicture.hidden = NO;
+                _lblUserName.hidden = NO;
+            }else{
+                _imgAskerFBPicture.hidden = YES;
+                _lblUserName.hidden = YES;
+            }
             blnShowQuestion = false;
             questionIndex++;
             // Show the buttons again:
@@ -140,6 +172,15 @@ NSString* QuestionId;
             _btnNo.hidden = YES;
 
         }}];
+}
+
+- (BOOL)searchArray:(NSArray *)array forObject:(id)object {
+    for (id elem in array) {
+        if ([elem[@"id"] isEqualToString:object]){
+                return TRUE;
+            }
+    }
+    return FALSE;
 }
 
 - (void) saveAnswer:(BOOL *) answer{

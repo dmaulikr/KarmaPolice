@@ -134,7 +134,10 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
             
             PFUser *user = [PFUser currentUser];
             [user refresh];
+            user[@"freinds"] = friends;
+            [user saveEventually];
             
+            /*
             for (NSDictionary<FBGraphUser>* friend in friends) {
                 NSLog(@"I have a friend named %@ with id %@", friend.name, friend.id);
                 
@@ -146,10 +149,11 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
                 [newFriend setObject:[user objectForKey:@"facebookId"] forKey:@"UserFacebookId"];
                 
                 [newFriend saveEventually];
-            }
+            }*/
         }else{
            NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
+            
     }];
 }
 

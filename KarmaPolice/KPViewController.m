@@ -42,14 +42,6 @@ NSData* questionImageData;
     [self uploadImage:questionImageData ]; //:newQuestion.objectId];
 }
 
-- (IBAction)btnAnonymously:(id)sender {
-}
-
-- (IBAction)btnShowQuestionTo:(id)sender {
-}
-
-
-
 - (IBAction)cameraButtonTapped:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:
          UIImagePickerControllerSourceTypeCamera] == YES){

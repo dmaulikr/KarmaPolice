@@ -37,4 +37,7 @@ extern NSString* QuestionId;
 
 - (void) updateKarmaPoints;
 
+- (BOOL)searchArray:(NSArray *)array forObject:(id)object;
+
+
 @end

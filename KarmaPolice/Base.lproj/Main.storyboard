@@ -257,9 +257,6 @@
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
-                                <connections>
-                                    <action selector="btnAnonymously:" destination="9qU-OY-Pbc" eventType="valueChanged" id="YMj-6v-ELu"/>
-                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OiY-vN-qxh">
                                 <rect key="frame" x="150" y="313" width="142" height="29"/>
@@ -268,9 +265,6 @@
                                     <segment title="All KP"/>
                                     <segment title="FB Freinds"/>
                                 </segments>
-                                <connections>
-                                    <action selector="btnShowQuestionTo:" destination="9qU-OY-Pbc" eventType="valueChanged" id="byQ-jw-guT"/>
-                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
