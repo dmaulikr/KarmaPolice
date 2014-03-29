@@ -36,10 +36,14 @@ NSString* QuestionId;
     karmaPoints = currentUser[@"KarmaPoints"];
     NSInteger intKarmaPoints = [karmaPoints integerValue];
     _KarmaPoints.text = [NSString stringWithFormat:@"%d", intKarmaPoints];
-    //make the corner of yes button round, how do I also apply this to _btnNo
+    //make the corner of yes button round
     CALayer *btnLayer = [_btnYes layer];
     [btnLayer setMasksToBounds:YES];
-    [btnLayer setCornerRadius:30.0f];
+    [btnLayer setCornerRadius:45.0f];
+    
+    CALayer *btnLayer1 = [_btnNo layer];
+    [btnLayer1 setMasksToBounds:YES];
+    [btnLayer1 setCornerRadius:45.0f];
     
    
 }
