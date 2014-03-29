@@ -50,6 +50,7 @@
 		2BE1465218DA0D92004CEB12 /* libi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BE1465118DA0D92004CEB12 /* libi.jpg */; };
 		2BE1465418DA0DB0004CEB12 /* natan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BE1465318DA0DB0004CEB12 /* natan.jpg */; };
 		2BE1465618DA0DFD004CEB12 /* tlv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2BE1465518DA0DFD004CEB12 /* tlv.jpg */; };
+		4BC67F9718E70F4900C85184 /* SAMARN__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4BC67F9618E70F4900C85184 /* SAMARN__.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		2BE1465118DA0D92004CEB12 /* libi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = libi.jpg; sourceTree = "<group>"; };
 		2BE1465318DA0DB0004CEB12 /* natan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = natan.jpg; sourceTree = "<group>"; };
 		2BE1465518DA0DFD004CEB12 /* tlv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tlv.jpg; sourceTree = "<group>"; };
+		4BC67F9618E70F4900C85184 /* SAMARN__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = SAMARN__.TTF; path = ../../FEWD_final_project/fonts/samarkan/SAMARN__.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 		2B4C76A91883F2FB00FD686D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BC67F9618E70F4900C85184 /* SAMARN__.TTF */,
 				2B4C76AA1883F2FB00FD686D /* KarmaPolice-Info.plist */,
 				2B4C76AB1883F2FB00FD686D /* InfoPlist.strings */,
 				2B4C76AE1883F2FB00FD686D /* main.m */,
@@ -348,6 +351,7 @@
 				2BE1464718D8D10C004CEB12 /* Icon-Small.png in Resources */,
 				2BE1465218DA0D92004CEB12 /* libi.jpg in Resources */,
 				2B4C76BE1883F2FB00FD686D /* Images.xcassets in Resources */,
+				4BC67F9718E70F4900C85184 /* SAMARN__.TTF in Resources */,
 				2BE1464918D8D10C004CEB12 /* Icon.png in Resources */,
 				2B4C76AD1883F2FB00FD686D /* InfoPlist.strings in Resources */,
 				2BE1464E18D8EF89004CEB12 /* Crossfit.png in Resources */,

@@ -45,6 +45,10 @@
 	<array>
 		<string></string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SMARN_.TTF</string>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

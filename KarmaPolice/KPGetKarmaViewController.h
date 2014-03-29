@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *txtQuestion;
 @property (weak, nonatomic) IBOutlet UIButton *btnYes;
 
+
 @property (weak, nonatomic) IBOutlet UIButton *btnNo;
 
 @property (weak, nonatomic) IBOutlet UIButton *txtResults;

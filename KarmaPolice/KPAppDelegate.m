@@ -40,7 +40,13 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    //add custom fonts
+    UIFont *newFont = [UIFont fontWithName:@"SAMARN_.TTF" size:14];
+    [[UILabel appearance] setFont:newFont];
+    
     return YES;
+    
+
 }
 
 
