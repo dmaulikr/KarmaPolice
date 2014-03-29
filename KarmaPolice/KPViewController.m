@@ -7,11 +7,12 @@
 //
 
 #import "KPViewController.h"
-#import <Parse/Parse.h>
 
 @interface KPViewController ()
 
 @end
+
+NSData* questionImageData;
 
 @implementation KPViewController
 
@@ -26,17 +27,137 @@
     [_KPAskerFBPhoto setImage:image];
 }
 
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD hides
+    [HUD removeFromSuperview];
+    HUD = nil;
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_txtQuestionField resignFirstResponder];
 }
 
 - (IBAction)ButtonTest:(id)sender {
-    PFObject *newQuestion = [PFObject objectWithClassName:@"TblQuestions"];
-    newQuestion[@"Question"] = _txtQuestionField.text;
-    PFUser *user = [PFUser currentUser];
-    newQuestion[@"UserId"] = user.objectId;
-    //newQuestion[@"cheatMode"] = @NO;
-    [newQuestion saveInBackground];
+    // Upload image and save all question data:
+    [self uploadImage:questionImageData ]; //:newQuestion.objectId];
+}
+
+- (IBAction)cameraButtonTapped:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:
+         UIImagePickerControllerSourceTypeCamera] == YES){
+        // Create image picker controller
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        
+        // Set source to the camera
+        imagePicker.sourceType =  UIImagePickerControllerSourceTypeCamera;
+        
+        // Delegate is self
+        imagePicker.delegate = self;
+        
+        // Show image picker
+        [self presentModalViewController:imagePicker animated:YES];
+    }else{
+        // Device has no camera
+        UIImage *image;
+        int r = arc4random() % 5;
+        switch (r) {
+            case 0:
+                image = [UIImage imageNamed:@"Crossfit.png"];
+                break;
+            case 1:
+                image = [UIImage imageNamed:@"natan.jpg"];
+                break;
+            case 2:
+                image = [UIImage imageNamed:@"lingos.png"];
+                break;
+            case 3:
+                image = [UIImage imageNamed:@"tlv.jpg"];
+                break;
+            case 4:
+                image = [UIImage imageNamed:@"libi.jpg"];
+                break;
+            default:
+                break;
+        }
+        
+        // Resize image
+        UIGraphicsBeginImageContext(CGSizeMake(640, 960));
+        [image drawInRect: CGRectMake(0, 0, 640, 960)];
+        UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        questionImageData = UIImageJPEGRepresentation(image, 0.05f);
+        //[self uploadImage:imageData];
+    }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    // Access the uncropped image from info dictionary
+    UIImage *image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    
+    // Dismiss controller
+    [picker dismissModalViewControllerAnimated:YES];
+    
+    // Resize image
+    UIGraphicsBeginImageContext(CGSizeMake(640, 960));
+    [image drawInRect: CGRectMake(0, 0, 640, 960)];
+    UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    // Upload image
+    questionImageData = UIImageJPEGRepresentation(image, 0.05f);
+    //[self uploadImage:imageData];
+}
+
+- (void)uploadImage:(NSData *)imageData {
+    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
+    
+    //HUD creation here (see example for code)
+    
+    // Save PFFile
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            // Hide old HUD, show completed HUD (see example for code)
+            
+            // Create a PFObject around a PFFile and associate it with the current user
+            
+            PFObject *newQuestion = [PFObject objectWithClassName:@"TblQuestions"];
+            newQuestion[@"Question"] = _txtQuestionField.text;
+            PFUser *user = [PFUser currentUser];
+            newQuestion[@"UserId"] = user.objectId;
+            
+            NSInteger askAnonymously = _btnAnonymously.selectedSegmentIndex;
+            NSInteger fbFriendsOnly = _btnShowQuestionTo.selectedSegmentIndex;
+            BOOL AA = askAnonymously == 0;
+            BOOL allKP = fbFriendsOnly == 0;
+            
+            newQuestion[@"askAnonymously"] = [NSNumber numberWithBool:AA];
+            newQuestion[@"allKP"] = [NSNumber numberWithBool:allKP];
+            
+            [newQuestion setObject:imageFile forKey:@"imageFile"];
+            
+            // Set the access control list to current user for security purposes
+            // userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+            
+            [newQuestion saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    //[self refresh:nil];
+                }
+                else{
+                    // Log details of the failure
+                    NSLog(@"Error: %@ %@", error, [error userInfo]);
+                }
+            }];
+        } else {
+            [HUD hide:YES];
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    } progressBlock:^(int percentDone) {
+        // Update your progress spinner here. percentDone will be between 0 and 100.
+        HUD.progress = (float)percentDone/100;
+    }];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
