@@ -13,7 +13,7 @@
 @end
 
 
-@implementation KPMyKarmaViewController
+@implementation KPMyKarmaViewController //Test remove this
 
 {
     NSArray *questionsArray;
