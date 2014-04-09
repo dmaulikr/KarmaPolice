@@ -37,13 +37,7 @@ NSString* QuestionId;
     NSInteger intKarmaPoints = [karmaPoints integerValue];
     _KarmaPoints.text = [NSString stringWithFormat:@"%d", intKarmaPoints];
     
-    CALayer *btnLayer = [_btnYes layer];
-    [btnLayer setMasksToBounds:YES];
-    [btnLayer setCornerRadius:45.0f];
-    
-    CALayer *btnLayer1 = [_btnNo layer];
-    [btnLayer1 setMasksToBounds:YES];
-    [btnLayer1 setCornerRadius:45.0f];
+
 }
 
 - (void)didReceiveMemoryWarning
