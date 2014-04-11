@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IGm-dn-zWQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IGm-dn-zWQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Karma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="prI-MO-zJN" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="66" y="69" width="188" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IxI-Y4-Xlk">
                                 <rect key="frame" x="35" y="305" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -34,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="btnYes" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEc-nF-QkR">
-                                <rect key="frame" x="42" y="393" width="100" height="100"/>
+                                <rect key="frame" x="40" y="393" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
@@ -87,21 +80,15 @@
                                 </connections>
                             </button>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EcY-Wb-F9J">
-                                <rect key="frame" x="35" y="120" width="250" height="250"/>
+                                <rect key="frame" x="10" y="62" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKL-ey-6dQ">
-                                <rect key="frame" x="-3" y="16" width="323" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="hoR-wf-tnZ"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Get Karma" image="24-gift.png" id="P8e-6o-9KR"/>
+                    <navigationItem key="navigationItem" title="Get Karma" id="fdB-yc-dC6"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="KarmaPoints" destination="UTU-VM-BIY" id="hek-RH-Dgq"/>
                         <outlet property="btnNo" destination="Oym-2Y-5hY" id="M3f-Ve-weU"/>
@@ -116,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cfe-8E-f7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="272" y="-785"/>
+            <point key="canvasLocation" x="798" y="-785"/>
         </scene>
         <!--View Controller - Login View Controller-->
         <scene sceneID="MR4-Gv-9rY">
@@ -162,15 +149,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="WBg-IM-OCe"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgh-gN-VQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629" y="-790"/>
+            <point key="canvasLocation" x="1169" y="-785"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1NU-7y-hoa">
             <objects>
                 <tabBarController storyboardIdentifier="KPTabBarControllerMain" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IGm-dn-zWQ" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="9P3-Be-70I">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -178,19 +168,20 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="mZx-xY-ygK" kind="relationship" relationship="viewControllers" id="ZBa-Ug-vdz"/>
-                        <segue destination="9qU-OY-Pbc" kind="relationship" relationship="viewControllers" id="BFu-Al-iYs"/>
-                        <segue destination="il9-QE-b4I" kind="relationship" relationship="viewControllers" id="1DJ-cB-0yF"/>
+                        <segue destination="QTj-N6-Mcu" kind="relationship" relationship="viewControllers" id="ZBa-Ug-vdz"/>
+                        <segue destination="0kn-0q-Qsy" kind="relationship" relationship="viewControllers" id="BFu-Al-iYs"/>
+                        <segue destination="ZTM-zf-IUK" kind="relationship" relationship="viewControllers" id="1DJ-cB-0yF"/>
+                        <segue destination="rPU-Hw-R7W" kind="relationship" relationship="viewControllers" id="KIe-X9-3e1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpW-Ma-JdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-292" y="-127"/>
+            <point key="canvasLocation" x="-622" y="259"/>
         </scene>
         <!--My Karma View Controller - My Karma-->
         <scene sceneID="P1L-rd-sCg">
             <objects>
-                <viewController id="il9-QE-b4I" customClass="KPMyKarmaViewController" sceneMemberID="viewController">
+                <viewController title="My Karma" id="il9-QE-b4I" customClass="KPMyKarmaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iGd-yS-8h8"/>
                         <viewControllerLayoutGuide type="bottom" id="MJe-vX-B4J"/>
@@ -199,12 +190,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Karma" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9s-5N-LBR">
-                                <rect key="frame" x="121" y="29" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9eO-P8-ZkR">
                                 <rect key="frame" x="20" y="58" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -254,9 +239,10 @@
                                 </segments>
                             </segmentedControl>
                             <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" translatesAutoresizingMaskIntoConstraints="NO" id="zq3-Hb-hXL">
-                                <rect key="frame" x="0.0" y="-41" width="320" height="85"/>
+                                <rect key="frame" x="-4" y="0.0" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zq3-Hb-hXL" id="OAi-0E-4hW">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -272,14 +258,35 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Karma" image="28-star.png" id="JZe-3B-DnM"/>
+                    <navigationItem key="navigationItem" title="My Karma" id="eDm-Pw-b9U"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="QuestionTableView" destination="zc0-Bt-Lja" id="52Z-VW-CvX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryq-gH-Q6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="542"/>
+            <point key="canvasLocation" x="802" y="551"/>
+        </scene>
+        <!--View Controller - Friends-->
+        <scene sceneID="cvK-01-1MF">
+            <objects>
+                <viewController restorationIdentifier="KPInviteFriends" storyboardIdentifier="KPInviteFriends" title="Friends" id="Lq5-V9-2XD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GO0-WW-cT1"/>
+                        <viewControllerLayoutGuide type="bottom" id="f2z-no-csH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yBh-HJ-h5P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friends" id="eCA-aw-OzT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yoc-pH-J12" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="1254"/>
         </scene>
         <!--View Controller - New Query-->
         <scene sceneID="nXa-90-0ge">
@@ -310,15 +317,8 @@
                                     <action selector="ButtonTest:" destination="9qU-OY-Pbc" eventType="touchUpInside" id="STk-P4-YJk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Karma Query" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2A-Bf-ZhP">
-                                <rect key="frame" x="83" y="40" width="154" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your query:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-Rw-xaf">
-                                <rect key="frame" x="93" y="67" width="154" height="21"/>
+                                <rect key="frame" x="88" y="77" width="154" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -392,7 +392,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New Query" image="08-chat.png" id="gsw-0X-XaD"/>
+                    <navigationItem key="navigationItem" title="New Query" id="UG0-XU-4QY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="GetKarmaViewController" destination="5wK-u0-m8t" id="K12-Az-vEd"/>
@@ -405,11 +405,88 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSr-Ns-rd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="806" y="-127"/>
+        </scene>
+        <!--Navigation Controller - Get Karma-->
+        <scene sceneID="5y9-k7-OCT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QTj-N6-Mcu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Get Karma" image="24-gift.png" id="P8e-6o-9KR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KGt-kg-c8a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mZx-xY-ygK" kind="relationship" relationship="rootViewController" id="BwN-Sv-5kW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CML-bp-tvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="-785"/>
+        </scene>
+        <!--Navigation Controller - New Query-->
+        <scene sceneID="vHU-Ch-IVG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0kn-0q-Qsy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New Query" image="08-chat.png" id="gsw-0X-XaD"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2VD-Oq-HKn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9qU-OY-Pbc" kind="relationship" relationship="rootViewController" id="GIp-rq-P1I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhi-oY-hsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="280" y="-127"/>
+        </scene>
+        <!--Navigation Controller - My Karma-->
+        <scene sceneID="AnH-Tq-uUT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZTM-zf-IUK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Karma" image="28-star.png" id="JZe-3B-DnM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vnK-FV-0X5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="il9-QE-b4I" kind="relationship" relationship="rootViewController" id="Mly-fU-6Hd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOz-Co-msy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="551"/>
+        </scene>
+        <!--Navigation Controller - Frinds-->
+        <scene sceneID="Mc5-V1-Yr4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rPU-Hw-R7W" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Frinds" image="112-group.png" id="cpi-g7-WIw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FSX-cJ-vSm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lq5-V9-2XD" kind="relationship" relationship="rootViewController" id="FgV-ZT-9fi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8W-oO-3cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="1254"/>
         </scene>
     </scenes>
     <resources>
         <image name="08-chat.png" width="24" height="22"/>
+        <image name="112-group.png" width="32" height="21"/>
         <image name="24-gift.png" width="22" height="26"/>
         <image name="28-star.png" width="26" height="26"/>
         <image name="buddhistpainting3.jpg" width="580" height="716"/>
