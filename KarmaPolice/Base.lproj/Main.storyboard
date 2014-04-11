@@ -111,11 +111,61 @@
                         <outlet property="questionImage" destination="EcY-Wb-F9J" id="DTn-Ld-if8"/>
                         <outlet property="txtQuestion" destination="nJV-SO-pxI" id="EnU-jf-k8o"/>
                         <outlet property="txtResults" destination="3WA-NY-JC5" id="ssr-kn-Sju"/>
+                        <segue destination="hyn-k7-AIf" kind="push" identifier="showLogin" id="xNP-KS-aSG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cfe-8E-f7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="-483"/>
+            <point key="canvasLocation" x="272" y="-785"/>
+        </scene>
+        <!--View Controller - Login View Controller-->
+        <scene sceneID="MR4-Gv-9rY">
+            <objects>
+                <viewController title="Login View Controller" id="hyn-k7-AIf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sgx-La-lbC"/>
+                        <viewControllerLayoutGuide type="bottom" id="jKb-gi-0wO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vE6-rH-9Ap">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buddhistpainting3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BEV-jb-xxk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Karma Police" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="161" translatesAutoresizingMaskIntoConstraints="NO" id="5JO-f4-tsp">
+                                <rect key="frame" x="80" y="142" width="161" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="44"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXk-UF-HGL">
+                                <rect key="frame" x="80" y="285" width="180" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign-in with Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We will NEVER post to Facebook!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-T5-Xzv">
+                                <rect key="frame" x="30" y="337" width="270" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WBg-IM-OCe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgh-gN-VQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="629" y="-790"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1NU-7y-hoa">
@@ -229,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryq-gH-Q6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="250"/>
+            <point key="canvasLocation" x="280" y="542"/>
         </scene>
         <!--View Controller - New Query-->
         <scene sceneID="nXa-90-0ge">
@@ -355,13 +405,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSr-Ns-rd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="-483"/>
+            <point key="canvasLocation" x="280" y="-127"/>
         </scene>
     </scenes>
     <resources>
         <image name="08-chat.png" width="24" height="22"/>
         <image name="24-gift.png" width="22" height="26"/>
         <image name="28-star.png" width="26" height="26"/>
+        <image name="buddhistpainting3.jpg" width="580" height="716"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

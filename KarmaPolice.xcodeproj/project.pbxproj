@@ -253,6 +253,7 @@
 		4B081E6518F815CF004ECA77 /* 97-puzzle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B081D9A18F815CF004ECA77 /* 97-puzzle.png */; };
 		4B081E6618F815CF004ECA77 /* 98-palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B081D9B18F815CF004ECA77 /* 98-palette.png */; };
 		4B081E6718F815CF004ECA77 /* 99-umbrella.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B081D9C18F815CF004ECA77 /* 99-umbrella.png */; };
+		4B081E6918F8567E004ECA77 /* buddhistpainting3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B081E6818F8567E004ECA77 /* buddhistpainting3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -521,6 +522,7 @@
 		4B081D9A18F815CF004ECA77 /* 97-puzzle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "97-puzzle.png"; sourceTree = "<group>"; };
 		4B081D9B18F815CF004ECA77 /* 98-palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "98-palette.png"; sourceTree = "<group>"; };
 		4B081D9C18F815CF004ECA77 /* 99-umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "99-umbrella.png"; sourceTree = "<group>"; };
+		4B081E6818F8567E004ECA77 /* buddhistpainting3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = buddhistpainting3.jpg; path = ../buddhistpainting3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,6 +658,7 @@
 		2B74E78118B2258F00B5A49A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4B081E6818F8567E004ECA77 /* buddhistpainting3.jpg */,
 				2BE1464118D8D10C004CEB12 /* Icon-iOS7@2x.png */,
 				2BE1464218D8D10C004CEB12 /* Icon-Small.png */,
 				2BE1464318D8D10C004CEB12 /* Icon-Small@2x.png */,
@@ -1083,6 +1086,7 @@
 				4B081E0218F815CF004ECA77 /* 180-stickynote.png in Resources */,
 				4B081E2C18F815CF004ECA77 /* 40-inbox.png in Resources */,
 				4B081E4E18F815CF004ECA77 /* 74-location.png in Resources */,
+				4B081E6918F8567E004ECA77 /* buddhistpainting3.jpg in Resources */,
 				4B081DED18F815CF004ECA77 /* 161-calculator.png in Resources */,
 				4B081E4518F815CF004ECA77 /* 65-note.png in Resources */,
 				4B081E4A18F815CF004ECA77 /* 70-tv.png in Resources */,
