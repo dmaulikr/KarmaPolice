@@ -489,11 +489,11 @@
             </objects>
             <point key="canvasLocation" x="280" y="551"/>
         </scene>
-        <!--Navigation Controller - Frinds-->
+        <!--Navigation Controller - Friends-->
         <scene sceneID="Mc5-V1-Yr4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rPU-Hw-R7W" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Frinds" image="112-group.png" id="cpi-g7-WIw"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="112-group.png" id="cpi-g7-WIw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FSX-cJ-vSm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
