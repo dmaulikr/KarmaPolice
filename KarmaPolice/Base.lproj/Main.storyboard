@@ -258,7 +258,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Karma" id="eDm-Pw-b9U"/>
+                    <navigationItem key="navigationItem" title="My Karma" id="eDm-Pw-b9U">
+                        <barButtonItem key="rightBarButtonItem" image="19-gear.png" id="jg4-QB-4hO">
+                            <connections>
+                                <segue destination="N6J-co-P8o" kind="push" id="OxM-BT-kNV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="QuestionTableView" destination="zc0-Bt-Lja" id="52Z-VW-CvX"/>
@@ -267,6 +273,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ryq-gH-Q6x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="802" y="551"/>
+        </scene>
+        <!--View Controller - Settings-->
+        <scene sceneID="nhT-0d-hrK">
+            <objects>
+                <viewController title="Settings" id="N6J-co-P8o" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Rx-V9-9PV"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Uu-Ha-Zxk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t7x-H6-v2A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="0HP-Sc-ltN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpZ-Ze-5qG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="551"/>
         </scene>
         <!--View Controller - Friends-->
         <scene sceneID="cvK-01-1MF">
@@ -487,6 +512,7 @@
     <resources>
         <image name="08-chat.png" width="24" height="22"/>
         <image name="112-group.png" width="32" height="21"/>
+        <image name="19-gear.png" width="26" height="26"/>
         <image name="24-gift.png" width="22" height="26"/>
         <image name="28-star.png" width="26" height="26"/>
         <image name="buddhistpainting3.jpg" width="580" height="716"/>
