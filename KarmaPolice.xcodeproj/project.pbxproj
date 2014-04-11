@@ -254,6 +254,7 @@
 		4B081E6618F815CF004ECA77 /* 98-palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B081D9B18F815CF004ECA77 /* 98-palette.png */; };
 		4B081E6718F815CF004ECA77 /* 99-umbrella.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B081D9C18F815CF004ECA77 /* 99-umbrella.png */; };
 		4B081E6918F8567E004ECA77 /* buddhistpainting3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B081E6818F8567E004ECA77 /* buddhistpainting3.jpg */; };
+		4B081E6B18F8593E004ECA77 /* SAMARN__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4B081E6A18F8593E004ECA77 /* SAMARN__.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -523,6 +524,7 @@
 		4B081D9B18F815CF004ECA77 /* 98-palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "98-palette.png"; sourceTree = "<group>"; };
 		4B081D9C18F815CF004ECA77 /* 99-umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "99-umbrella.png"; sourceTree = "<group>"; };
 		4B081E6818F8567E004ECA77 /* buddhistpainting3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = buddhistpainting3.jpg; path = ../buddhistpainting3.jpg; sourceTree = "<group>"; };
+		4B081E6A18F8593E004ECA77 /* SAMARN__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = SAMARN__.TTF; path = ../SAMARN__.TTF; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,6 +631,7 @@
 		2B4C76A91883F2FB00FD686D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B081E6A18F8593E004ECA77 /* SAMARN__.TTF */,
 				2B4C76AA1883F2FB00FD686D /* KarmaPolice-Info.plist */,
 				2B4C76AB1883F2FB00FD686D /* InfoPlist.strings */,
 				2B4C76AE1883F2FB00FD686D /* main.m */,
@@ -994,6 +997,7 @@
 				4B081DF018F815CF004ECA77 /* 164-glasses-2.png in Resources */,
 				4B081DEC18F815CF004ECA77 /* 160-voicemail-2.png in Resources */,
 				4B081E1318F815CF004ECA77 /* 196-radiation.png in Resources */,
+				4B081E6B18F8593E004ECA77 /* SAMARN__.TTF in Resources */,
 				4B081E2618F815CF004ECA77 /* 34-coffee.png in Resources */,
 				2BE1464718D8D10C004CEB12 /* Icon-Small.png in Resources */,
 				4B081DA118F815CF004ECA77 /* 02-redo.png in Resources */,
