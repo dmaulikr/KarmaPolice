@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IGm-dn-zWQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IGm-dn-zWQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -94,7 +94,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Get Karma" image="getkarma.png" id="P8e-6o-9KR"/>
+                    <tabBarItem key="tabBarItem" title="Get Karma" image="24-gift.png" id="P8e-6o-9KR"/>
                     <connections>
                         <outlet property="KarmaPoints" destination="UTU-VM-BIY" id="hek-RH-Dgq"/>
                         <outlet property="btnNo" destination="Oym-2Y-5hY" id="M3f-Ve-weU"/>
@@ -216,7 +216,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Karma" image="mykarma.png" id="JZe-3B-DnM"/>
+                    <tabBarItem key="tabBarItem" title="My Karma" image="28-star.png" id="JZe-3B-DnM"/>
                     <connections>
                         <outlet property="QuestionTableView" destination="zc0-Bt-Lja" id="52Z-VW-CvX"/>
                     </connections>
@@ -225,7 +225,7 @@
             </objects>
             <point key="canvasLocation" x="133" y="250"/>
         </scene>
-        <!--View Controller - Ask a Question-->
+        <!--View Controller - New Query-->
         <scene sceneID="nXa-90-0ge">
             <objects>
                 <viewController storyboardIdentifier="KPAskQuestion" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9qU-OY-Pbc" customClass="KPViewController" sceneMemberID="viewController">
@@ -336,7 +336,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ask a Question" image="newquery.png" id="gsw-0X-XaD"/>
+                    <tabBarItem key="tabBarItem" title="New Query" image="08-chat.png" id="gsw-0X-XaD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="GetKarmaViewController" destination="5wK-u0-m8t" id="K12-Az-vEd"/>
@@ -353,9 +353,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="getkarma.png" width="35" height="39"/>
-        <image name="mykarma.png" width="39" height="38"/>
-        <image name="newquery.png" width="42" height="38"/>
+        <image name="08-chat.png" width="24" height="22"/>
+        <image name="24-gift.png" width="22" height="26"/>
+        <image name="28-star.png" width="26" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
