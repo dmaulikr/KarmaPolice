@@ -35,6 +35,8 @@
         cell = [nib objectAtIndex:0];
     }
     
+    NSMutableDictionary *mutableDict = questionsArray[indexPath.row];
+    
     cell.timeLabel.text = [questionsArray[indexPath.row] objectForKey:@"createdAt"];
     cell.questionLabel.text = [questionsArray[indexPath.row] objectForKey:@"questionText"];
     cell.resultsLabel.text = @"Oy";
@@ -103,11 +105,17 @@
          
                 NSArray *keys = [NSArray arrayWithObjects:@"questionText", @"CreatedAt", @"privacyLevel",@"percantageYes",@"totalNumberOfAnswers", nil];
                 NSArray *arrObjects = [NSArray arrayWithObjects:[object objectForKey:@"Question"],strCreatedAt,[object objectForKey:@"allKP"],@"0",@"0", nil];
-                NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:arrObjects
-                                                                       forKeys:keys];
+                NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:arrObjects forKeys:keys];
                 
                 NSMutableDictionary *mutableDict = [dictionary mutableCopy];
-                [questionsArray[questionIndex] addObject:mutableDict];
+                
+                NSLog(@"NSMutableDictionary content:  %@", [mutableDict valueForKey:@"questionText"]);
+                
+                [questionsArray[questionIndex] addObject:[mutableDict copy]];
+                
+                NSMutableDictionary *Testy = questionsArray[questionIndex];
+                
+                NSLog(@"Array content:  %@", [Testy valueForKey:@"questionText"]);
                 questionIndex++;
             }
         }
