@@ -11,7 +11,7 @@
 #import "TableViewCell.h"
 
 
-NSArray *questionsArray;
+NSMutableArray *questionsArray;
 
 @interface KPMyKarmaViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

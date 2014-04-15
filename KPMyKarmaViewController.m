@@ -16,7 +16,7 @@
 @implementation KPMyKarmaViewController //Test
 
 {
-    NSArray *questionsArray;
+    NSMutableArray *questionsArray;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -64,8 +64,8 @@
 
 - (void)viewDidLoad
 {
- 
     [super viewDidLoad];
+    questionsArray = [[NSMutableArray alloc] init];
     
     _QuestionTableView.delegate = self;
     _QuestionTableView.dataSource = self;
@@ -73,8 +73,6 @@
     // Do any additional setup after loading the view.
     // questionsArray = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
     [self populateArray];
-
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,11 +105,13 @@
                 NSArray *arrObjects = [NSArray arrayWithObjects:[object objectForKey:@"Question"],strCreatedAt,[object objectForKey:@"allKP"],@"0",@"0", nil];
                 NSDictionary *dictionary = [NSDictionary dictionaryWithObjects:arrObjects forKeys:keys];
                 
-                NSMutableDictionary *mutableDict = [dictionary mutableCopy];
+                NSMutableDictionary *mutableDict; //= [[NSMutableDictionary alloc]init];
+                mutableDict = [dictionary mutableCopy];
                 
                 NSLog(@"NSMutableDictionary content:  %@", [mutableDict valueForKey:@"questionText"]);
                 
-                [questionsArray[questionIndex] addObject:[mutableDict copy]];
+                
+                [questionsArray addObject:[mutableDict copy]];
                 
                 NSMutableDictionary *Testy = questionsArray[questionIndex];
                 
