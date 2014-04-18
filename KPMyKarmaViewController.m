@@ -21,8 +21,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //questionsArray = [[NSMutableArray alloc] init];
-    //[self populateArray];
     return [questionsArray count];
 }
 
@@ -45,13 +43,6 @@
     cell.peopleLabel.text = @"Oy X2";
     cell.privacySegments.selectedSegmentIndex = [questionsArray[indexPath.row] objectForKey:@"privacyLevel"];
     
-    
-    /*
-    cell.nameLabel.text = [tableData objectAtIndex:indexPath.row];
-    cell.thumbnailImageView.image = [UIImage imageNamed:[thumbnails objectAtIndex:indexPath.row]];
-    cell.prepTimeLabel.text = [prepTime objectAtIndex:indexPath.row];
-    */
-     
     return cell;
 }
 
@@ -87,10 +78,9 @@
     PFQuery *query = [PFQuery queryWithClassName:@"TblQuestions"];
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"UserId" equalTo:user.objectId];
-    
+        // This needs error handling: Gil to add @try @Catch:
         NSArray *objects = [query findObjects];
     
-    //[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects.count > 0) {
             // The find succeeded
             NSLog(@"Successfully retrieved %d questions", objects.count);
