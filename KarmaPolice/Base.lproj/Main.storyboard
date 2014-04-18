@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IGm-dn-zWQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IGm-dn-zWQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Get Karma View Controller - Get Karma-->
@@ -154,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgh-gN-VQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1169" y="-785"/>
+            <point key="canvasLocation" x="1209" y="-785"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1NU-7y-hoa">
@@ -430,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSr-Ns-rd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="-127"/>
+            <point key="canvasLocation" x="802" y="-127"/>
         </scene>
         <!--Navigation Controller - Get Karma-->
         <scene sceneID="5y9-k7-OCT">

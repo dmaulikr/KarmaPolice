@@ -1,4 +1,4 @@
-//
+    //
 //  KPMyKarmaViewController.m
 //  KarmaPolice
 //
@@ -21,6 +21,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    //questionsArray = [[NSMutableArray alloc] init];
+    //[self populateArray];
     return [questionsArray count];
 }
 
@@ -86,8 +88,10 @@
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"UserId" equalTo:user.objectId];
     
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error && objects.count > 0) {
+        NSArray *objects = [query findObjects];
+    
+    //[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count > 0) {
             // The find succeeded
             NSLog(@"Successfully retrieved %d questions", objects.count);
             int questionIndex;
@@ -119,7 +123,7 @@
                 questionIndex++;
             }
         }
-    }];
+   // }];
 }
 
 
