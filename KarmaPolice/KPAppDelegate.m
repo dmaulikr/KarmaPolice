@@ -36,10 +36,6 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
     LoginViewController.title = @"Karma Police";
     [LoginViewController.logInView.facebookButton addTarget:self action:@selector(loginButtonTouchHandler:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:LoginViewController];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
