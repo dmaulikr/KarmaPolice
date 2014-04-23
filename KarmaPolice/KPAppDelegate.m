@@ -20,7 +20,9 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+    UIFont *newFont = [UIFont fontWithName:@"Samarkan" size:14];
+    [[UILabel appearance] setFont:newFont];
+    
     // Override point for customization after application launch.
     [Parse setApplicationId:@"Muo904vBZAdFQzXGvgQlMI9u3ZJ0JBTVV456rU3C"
                   clientKey:@"LIUytnzp1ywCJuuK0d31nnys7wPIeMjYHpwUnR24"];
