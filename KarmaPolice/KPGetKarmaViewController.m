@@ -26,6 +26,11 @@ NSString* QuestionId;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
+    [titleBarAttributes setValue:[UIFont fontWithName:@"Samarkan" size:18] forKey:NSFontAttributeName];
+    [[UINavigationBar appearance] setTitleTextAttributes:titleBarAttributes];
+    
     _txtResults.hidden = YES;
     blnShowQuestion = true;
     questionIndex = 0;

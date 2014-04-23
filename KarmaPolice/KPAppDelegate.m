@@ -20,8 +20,9 @@ view controllers: (1) KPGetKarmaViewController (2) new query (3) activity (4) in
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIFont *newFont = [UIFont fontWithName:@"Samarkan" size:14];
-    [[UILabel appearance] setFont:newFont];
+    NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
+    [titleBarAttributes setValue:[UIFont fontWithName:@"Samarkan" size:18] forKey:NSFontAttributeName];
+    [[UINavigationBar appearance] setTitleTextAttributes:titleBarAttributes];
     
     // Override point for customization after application launch.
     [Parse setApplicationId:@"Muo904vBZAdFQzXGvgQlMI9u3ZJ0JBTVV456rU3C"
