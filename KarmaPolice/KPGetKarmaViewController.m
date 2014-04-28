@@ -22,6 +22,12 @@ NSString* QuestionId;
 
 @implementation KPGetKarmaViewController
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,6 +36,11 @@ NSString* QuestionId;
     NSMutableDictionary *titleBarAttributes = [NSMutableDictionary dictionaryWithDictionary: [[UINavigationBar appearance] titleTextAttributes]];
     [titleBarAttributes setValue:[UIFont fontWithName:@"Samarkan" size:18] forKey:NSFontAttributeName];
     [[UINavigationBar appearance] setTitleTextAttributes:titleBarAttributes];
+    [[self navigationController] setNavigationBarHidden:NO];
+    self.navigationController.navigationBarHidden = NO;
+    
+    
+
     
     _txtResults.hidden = YES;
     blnShowQuestion = true;
