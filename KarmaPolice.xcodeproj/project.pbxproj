@@ -24,7 +24,6 @@
 		2B4C76AD1883F2FB00FD686D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76AB1883F2FB00FD686D /* InfoPlist.strings */; };
 		2B4C76AF1883F2FB00FD686D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76AE1883F2FB00FD686D /* main.m */; };
 		2B4C76B31883F2FB00FD686D /* KPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */; };
-		2B4C76B61883F2FB00FD686D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76B41883F2FB00FD686D /* Main.storyboard */; };
 		2B4C76B91883F2FB00FD686D /* KPGetKarmaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76B81883F2FB00FD686D /* KPGetKarmaViewController.m */; };
 		2B4C76BE1883F2FB00FD686D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76BD1883F2FB00FD686D /* Images.xcassets */; };
 		2B4C76C51883F2FB00FD686D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76C41883F2FB00FD686D /* XCTest.framework */; };
@@ -38,6 +37,11 @@
 		2B8A8707189A431500E36D7A /* KPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8A8706189A431500E36D7A /* KPViewController.m */; };
 		2B94D5AA18E2102D00963435 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B94D5A918E2102D00963435 /* TableViewCell.m */; };
 		2B94D5AD18E2175100963435 /* KPMyKarmaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B94D5AC18E2175100963435 /* KPMyKarmaViewController.m */; };
+		2B9F42421910368E005D44B2 /* KPInviteFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F42411910368E005D44B2 /* KPInviteFriendsViewController.m */; };
+		2B9F424419103967005D44B2 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9F424319103967005D44B2 /* MessageUI.framework */; };
+		2B9F42471911752B005D44B2 /* InviteFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F42461911752B005D44B2 /* InviteFriendsTableViewController.m */; };
+		2B9F4249191175F2005D44B2 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9F4248191175F2005D44B2 /* AddressBookUI.framework */; };
+		2B9F424B191175FA005D44B2 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9F424A191175FA005D44B2 /* AddressBook.framework */; };
 		2BC84E3318E4B3EF007AE8B7 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B94D55818E0D6AC00963435 /* TableCell.xib */; };
 		2BE1464018D8C1F4004CEB12 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE1463F18D8C1F4004CEB12 /* MBProgressHUD.m */; };
 		2BE1464618D8D10C004CEB12 /* Icon-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BE1464118D8D10C004CEB12 /* Icon-iOS7@2x.png */; };
@@ -289,7 +293,6 @@
 		2B4C76B01883F2FB00FD686D /* KarmaPolice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KarmaPolice-Prefix.pch"; sourceTree = "<group>"; };
 		2B4C76B11883F2FB00FD686D /* KPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPAppDelegate.h; sourceTree = "<group>"; };
 		2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPAppDelegate.m; sourceTree = "<group>"; };
-		2B4C76B51883F2FB00FD686D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B4C76B71883F2FB00FD686D /* KPGetKarmaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KPGetKarmaViewController.h; sourceTree = "<group>"; };
 		2B4C76B81883F2FB00FD686D /* KPGetKarmaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KPGetKarmaViewController.m; sourceTree = "<group>"; };
 		2B4C76BD1883F2FB00FD686D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -308,6 +311,13 @@
 		2B94D5A918E2102D00963435 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCell.m; path = ../TableViewCell.m; sourceTree = "<group>"; };
 		2B94D5AB18E2175100963435 /* KPMyKarmaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KPMyKarmaViewController.h; path = ../KPMyKarmaViewController.h; sourceTree = "<group>"; };
 		2B94D5AC18E2175100963435 /* KPMyKarmaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KPMyKarmaViewController.m; path = ../KPMyKarmaViewController.m; sourceTree = "<group>"; };
+		2B9F42401910368E005D44B2 /* KPInviteFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPInviteFriendsViewController.h; sourceTree = "<group>"; };
+		2B9F42411910368E005D44B2 /* KPInviteFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPInviteFriendsViewController.m; sourceTree = "<group>"; };
+		2B9F424319103967005D44B2 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2B9F42451911752B005D44B2 /* InviteFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendsTableViewController.h; sourceTree = "<group>"; };
+		2B9F42461911752B005D44B2 /* InviteFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendsTableViewController.m; sourceTree = "<group>"; };
+		2B9F4248191175F2005D44B2 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		2B9F424A191175FA005D44B2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		2BE1463E18D8C1F4004CEB12 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2BE1463F18D8C1F4004CEB12 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2BE1464118D8D10C004CEB12 /* Icon-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iOS7@2x.png"; sourceTree = "<group>"; };
@@ -532,6 +542,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B9F424B191175FA005D44B2 /* AddressBook.framework in Frameworks */,
+				2B9F4249191175F2005D44B2 /* AddressBookUI.framework in Frameworks */,
+				2B9F424419103967005D44B2 /* MessageUI.framework in Frameworks */,
 				2B31D5131887DC4000FE6E4A /* SystemConfiguration.framework in Frameworks */,
 				2B31D5111887DC3400FE6E4A /* StoreKit.framework in Frameworks */,
 				2B31D50F1887DC2C00FE6E4A /* Security.framework in Frameworks */,
@@ -585,6 +598,9 @@
 		2B4C76A11883F2FB00FD686D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B9F424A191175FA005D44B2 /* AddressBook.framework */,
+				2B9F4248191175F2005D44B2 /* AddressBookUI.framework */,
+				2B9F424319103967005D44B2 /* MessageUI.framework */,
 				2B31D5141887E78800FE6E4A /* FacebookSDK.framework */,
 				2B31D5121887DC4000FE6E4A /* SystemConfiguration.framework */,
 				2B31D5101887DC3400FE6E4A /* StoreKit.framework */,
@@ -610,7 +626,10 @@
 				2B94D55818E0D6AC00963435 /* TableCell.xib */,
 				2B94D5A818E2102D00963435 /* TableViewCell.h */,
 				2B94D5A918E2102D00963435 /* TableViewCell.m */,
-				2B4C76B41883F2FB00FD686D /* Main.storyboard */,
+				2B9F42451911752B005D44B2 /* InviteFriendsTableViewController.h */,
+				2B9F42461911752B005D44B2 /* InviteFriendsTableViewController.m */,
+				2B9F42401910368E005D44B2 /* KPInviteFriendsViewController.h */,
+				2B9F42411910368E005D44B2 /* KPInviteFriendsViewController.m */,
 				2B4C76B11883F2FB00FD686D /* KPAppDelegate.h */,
 				2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */,
 				2B4C76B71883F2FB00FD686D /* KPGetKarmaViewController.h */,
@@ -1138,7 +1157,6 @@
 				4B081DD018F815CF004ECA77 /* 135-hockeymask.png in Resources */,
 				4B081DB918F815CF004ECA77 /* 114-balloon.png in Resources */,
 				4B081DE618F815CF004ECA77 /* 155-bowtie.png in Resources */,
-				2B4C76B61883F2FB00FD686D /* Main.storyboard in Resources */,
 				4B081E2918F815CF004ECA77 /* 37-suitcase.png in Resources */,
 				4B081E1C18F815CF004ECA77 /* 24-gift.png in Resources */,
 				4B081E2D18F815CF004ECA77 /* 41-picture-frame.png in Resources */,
@@ -1219,8 +1237,10 @@
 				2B94D5AA18E2102D00963435 /* TableViewCell.m in Sources */,
 				2B4C76B91883F2FB00FD686D /* KPGetKarmaViewController.m in Sources */,
 				2BE1464018D8C1F4004CEB12 /* MBProgressHUD.m in Sources */,
+				2B9F42471911752B005D44B2 /* InviteFriendsTableViewController.m in Sources */,
 				2B4C76AF1883F2FB00FD686D /* main.m in Sources */,
 				2B4C76B31883F2FB00FD686D /* KPAppDelegate.m in Sources */,
+				2B9F42421910368E005D44B2 /* KPInviteFriendsViewController.m in Sources */,
 				2B8A8707189A431500E36D7A /* KPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1250,14 +1270,6 @@
 				2B4C76AC1883F2FB00FD686D /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2B4C76B41883F2FB00FD686D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B4C76B51883F2FB00FD686D /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		2B4C76CD1883F2FB00FD686D /* InfoPlist.strings */ = {
