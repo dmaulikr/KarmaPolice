@@ -303,10 +303,10 @@
             </objects>
             <point key="canvasLocation" x="1186" y="551"/>
         </scene>
-        <!--View Controller - Friends-->
+        <!--Invite Friends View Controller - Friends-->
         <scene sceneID="cvK-01-1MF">
             <objects>
-                <viewController restorationIdentifier="KPInviteFriends" storyboardIdentifier="KPInviteFriends" title="Friends" id="Lq5-V9-2XD" sceneMemberID="viewController">
+                <viewController restorationIdentifier="KPInviteFriends" storyboardIdentifier="KPInviteFriends" title="Friends" id="Lq5-V9-2XD" customClass="InviteFriendsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GO0-WW-cT1"/>
                         <viewControllerLayoutGuide type="bottom" id="f2z-no-csH"/>

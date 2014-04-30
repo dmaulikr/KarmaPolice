@@ -32,6 +32,10 @@
 		2B4C76C71883F2FB00FD686D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B4C76A61883F2FB00FD686D /* UIKit.framework */; };
 		2B4C76CF1883F2FB00FD686D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C76CD1883F2FB00FD686D /* InfoPlist.strings */; };
 		2B4C76D11883F2FB00FD686D /* KarmaPoliceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C76D01883F2FB00FD686D /* KarmaPoliceTests.m */; };
+		2B6B31DA191188CC003ADB56 /* InviteFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B31D9191188CC003ADB56 /* InviteFriendsViewController.m */; };
+		2B6B31DC19118955003ADB56 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6B31DB19118955003ADB56 /* MessageUI.framework */; };
+		2B6B31DE1911895D003ADB56 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6B31DD1911895D003ADB56 /* AddressBook.framework */; };
+		2B6B31E019118964003ADB56 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6B31DF19118964003ADB56 /* AddressBookUI.framework */; };
 		2B87595C18C91B2C00EE2010 /* getkarma.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B87595818C91B2C00EE2010 /* getkarma.png */; };
 		2B87595E18C91B2C00EE2010 /* mykarma.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B87595A18C91B2C00EE2010 /* mykarma.png */; };
 		2B87595F18C91B2C00EE2010 /* newquery.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B87595B18C91B2C00EE2010 /* newquery.png */; };
@@ -298,6 +302,11 @@
 		2B4C76CC1883F2FB00FD686D /* KarmaPoliceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KarmaPoliceTests-Info.plist"; sourceTree = "<group>"; };
 		2B4C76CE1883F2FB00FD686D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B4C76D01883F2FB00FD686D /* KarmaPoliceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KarmaPoliceTests.m; sourceTree = "<group>"; };
+		2B6B31D8191188CC003ADB56 /* InviteFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InviteFriendsViewController.h; sourceTree = "<group>"; };
+		2B6B31D9191188CC003ADB56 /* InviteFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InviteFriendsViewController.m; sourceTree = "<group>"; };
+		2B6B31DB19118955003ADB56 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2B6B31DD1911895D003ADB56 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		2B6B31DF19118964003ADB56 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		2B87595818C91B2C00EE2010 /* getkarma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = getkarma.png; path = Images/getkarma.png; sourceTree = SOURCE_ROOT; };
 		2B87595A18C91B2C00EE2010 /* mykarma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mykarma.png; path = Images/mykarma.png; sourceTree = SOURCE_ROOT; };
 		2B87595B18C91B2C00EE2010 /* newquery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newquery.png; path = Images/newquery.png; sourceTree = SOURCE_ROOT; };
@@ -532,6 +541,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6B31E019118964003ADB56 /* AddressBookUI.framework in Frameworks */,
+				2B6B31DE1911895D003ADB56 /* AddressBook.framework in Frameworks */,
+				2B6B31DC19118955003ADB56 /* MessageUI.framework in Frameworks */,
 				2B31D5131887DC4000FE6E4A /* SystemConfiguration.framework in Frameworks */,
 				2B31D5111887DC3400FE6E4A /* StoreKit.framework in Frameworks */,
 				2B31D50F1887DC2C00FE6E4A /* Security.framework in Frameworks */,
@@ -585,6 +597,9 @@
 		2B4C76A11883F2FB00FD686D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B6B31DF19118964003ADB56 /* AddressBookUI.framework */,
+				2B6B31DD1911895D003ADB56 /* AddressBook.framework */,
+				2B6B31DB19118955003ADB56 /* MessageUI.framework */,
 				2B31D5141887E78800FE6E4A /* FacebookSDK.framework */,
 				2B31D5121887DC4000FE6E4A /* SystemConfiguration.framework */,
 				2B31D5101887DC3400FE6E4A /* StoreKit.framework */,
@@ -611,6 +626,8 @@
 				2B94D5A818E2102D00963435 /* TableViewCell.h */,
 				2B94D5A918E2102D00963435 /* TableViewCell.m */,
 				2B4C76B41883F2FB00FD686D /* Main.storyboard */,
+				2B6B31D8191188CC003ADB56 /* InviteFriendsViewController.h */,
+				2B6B31D9191188CC003ADB56 /* InviteFriendsViewController.m */,
 				2B4C76B11883F2FB00FD686D /* KPAppDelegate.h */,
 				2B4C76B21883F2FB00FD686D /* KPAppDelegate.m */,
 				2B4C76B71883F2FB00FD686D /* KPGetKarmaViewController.h */,
@@ -1216,6 +1233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B94D5AD18E2175100963435 /* KPMyKarmaViewController.m in Sources */,
+				2B6B31DA191188CC003ADB56 /* InviteFriendsViewController.m in Sources */,
 				2B94D5AA18E2102D00963435 /* TableViewCell.m in Sources */,
 				2B4C76B91883F2FB00FD686D /* KPGetKarmaViewController.m in Sources */,
 				2BE1464018D8C1F4004CEB12 /* MBProgressHUD.m in Sources */,
