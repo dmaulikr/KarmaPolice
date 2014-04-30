@@ -11,5 +11,5 @@
 #import <AddressBookUI/AddressBookUI.h>
 
 @interface InviteFriendsViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate,MFMessageComposeViewControllerDelegate,UINavigationControllerDelegate>
-
+    extern NSString* phoneNumber;
 @end

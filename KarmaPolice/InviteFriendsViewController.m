@@ -9,6 +9,8 @@
 #import "InviteFriendsViewController.h"
 #import "InviteFriendsViewController.h"
 
+NSString* phoneNumber;
+
 @interface InviteFriendsViewController ()
 
 @end
@@ -77,7 +79,7 @@
 {
     NSString* name = (__bridge_transfer NSString*)ABRecordCopyValue(person,
                                                                     kABPersonFirstNameProperty);
-    //self.firstName.text = name;
+    
     
     NSString* phone = nil;
     ABMultiValueRef phoneNumbers = ABRecordCopyValue(person,
@@ -88,7 +90,10 @@
     } else {
         phone = @"[None]";
     }
-    //self.phoneNumber.text = phone;
+    phoneNumber = phone;
+    [self showSMS:name];
+    //self.firstName.text = name;
+    
     CFRelease(phoneNumbers);
 }
 
@@ -124,8 +129,8 @@
         return;
     }
     
-    NSArray *recipents = @[@"12345678", @"72345524"];
-    NSString *message = [NSString stringWithFormat:@"Just sent the %@ file to your email. Please check!", messageStr];
+    NSArray *recipents = @[phoneNumber, @"72345524"];
+    NSString *message = [NSString stringWithFormat:@"%@, Checkout KP!", messageStr];
     
     MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
     messageController.messageComposeDelegate = self;
