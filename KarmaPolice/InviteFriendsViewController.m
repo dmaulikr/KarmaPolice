@@ -1,5 +1,5 @@
 //
-//  KPInviteFriendsViewController.m
+//  InviteFriendsViewController.m
 //  KarmaPolice
 //
 //  Created by Gil Shulman on 4/29/14.
@@ -34,9 +34,8 @@
     [self showPicker];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    //[self showPicker];
+- (IBAction)InviteFriends:(id)sender {
+        [self showPicker];
 }
 
 - (void)showPicker
