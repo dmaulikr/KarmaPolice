@@ -511,12 +511,46 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Lq5-V9-2XD" kind="relationship" relationship="rootViewController" id="FgV-ZT-9fi"/>
+                        <segue destination="CvG-z5-Mq9" kind="relationship" relationship="rootViewController" id="cjZ-1r-VnU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8W-oO-3cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="1254"/>
+            <point key="canvasLocation" x="255" y="1256"/>
+        </scene>
+        <!--Invite Friends View Controller-->
+        <scene sceneID="Or9-0c-y4Q">
+            <objects>
+                <viewController id="CvG-z5-Mq9" customClass="KPInviteFriendsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6cg-2C-D8m"/>
+                        <viewControllerLayoutGuide type="bottom" id="n3k-af-c6E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c5r-pi-LYC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqi-cd-eEU">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="FriendsPicker:" destination="CvG-z5-Mq9" eventType="touchUpInside" id="YSH-uD-o0S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MMk-OD-bgl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyr-VJ-rA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="1256"/>
         </scene>
     </scenes>
     <resources>
